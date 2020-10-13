@@ -3,6 +3,7 @@
     --verde-2: #3e978b;
     --mostaza: #d2e603;
     --beige: #eff48e;
+    --logo: #374251
 }
 
 * {
@@ -56,7 +57,7 @@
 }
 
 header{
-    background-color: var(--verde-2);
+    background-color: var(--logo);
     padding: 10px;
 }
 
@@ -87,6 +88,10 @@ header{
     color: black;
 }
 
+i {
+    color: var(--mostaza);
+}
+
 @media (min-width: 768px){
     #contenedor-2{
         display: flex;
@@ -94,4 +99,12 @@ header{
         flex-direction: row;
         justify-content: space-around;
     }
+
+    #buscador input{
+
+        height: 30px;
+        font-size: 25px;
+        margin: 5px;
+    }
+
 }
