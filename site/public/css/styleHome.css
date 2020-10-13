@@ -72,10 +72,14 @@ header{
     border: solid 2px black;
     padding: 1%;
     margin: 1%;
-    background-color: var(--verde-1);
+    background-color: var(--beige);
     min-width: 20%;
     text-align: center;
+}
 
+#contenedor-2 li:hover {
+    background-color: #d2e603;
+    cursor: pointer;
 }
 
 #contenedor-2 li a {
