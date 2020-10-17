@@ -144,11 +144,12 @@ main{
 
 #login{
     border: 3px solid var(--verde-2);
-    width: 300px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
     margin: 20px auto;
     padding-right: 20px;
     padding-left: 20px;
+    background-color: var(--verde-1);
 }
 
 #login h3{
@@ -158,26 +159,47 @@ main{
 }
 
 
-#login .form-log {
-    text-align: ;
-}
+
 
 #campo-mail, #campo-pass{
-    margin: 10px auto;
+    margin: 20px auto;
 
 }
 
-#login input{
+#login #campo-mail input{
     width: 250px;
+    height: 25px
+
+}
+
+#login #campo-pass input{
+    width: 250px;
+    height: 25px
+
+}
+
+#login #nuevoPass{
+    font-size: 14px;
+    text-align: left;
+    padding-bottom: 15px;
 }
 
 #login #registro{
     font-size: 14px;
+    padding-top: 10px;
     text-align: right;
 }
 
-#login input{
-    height: 25px;
+
+#recordar{
+    font-size: 15px;
+
+}
+#recordar input{
+    display: inline;
+}
+#recordar label{
+    display: inline;
 }
 
 body{
@@ -201,7 +223,7 @@ body{
     }
 
     main{
-        padding-top: 170px;
+        padding-top: 200px;
     }
 
 }
