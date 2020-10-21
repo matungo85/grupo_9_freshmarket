@@ -5,13 +5,13 @@
     --beige: #eff48e;
     --logo: #374251
 }
-
+/*
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
-
+*/
 #contenedor-1 {
     display: flex;
     flex-wrap: wrap;
@@ -243,3 +243,4 @@ footer #redes {
     }
     
 }
+
