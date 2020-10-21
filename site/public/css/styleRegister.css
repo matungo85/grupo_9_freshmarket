@@ -71,13 +71,8 @@ main{
     padding-top: 200px;
 }
 
-main h1{
-    text-align: center;
-    font-size: 70px;
-}
-
-#contenedor-2{
-    display: flex;
+nav #contenedor-2{
+    display: none;
     flex-wrap: wrap;
     justify-content: space-around;
     flex-direction: column;
@@ -172,8 +167,6 @@ footer {
     padding: 50px 50px;
     display: flex;
     justify-content: space-between;
-    border-top: var(--logo) 3px double;
-
  
 }
 
