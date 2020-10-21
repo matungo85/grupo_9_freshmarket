@@ -1,0 +1,230 @@
+:root{
+    --verde-1: #2ec1ac;
+    --verde-2: #3e978b;
+    --mostaza: #d2e603;
+    --beige: #eff48e;
+    --logo: #374251
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+#contenedor-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#logo{
+    width: 15%;
+}
+
+
+
+#buscador input{
+
+    height: 20px;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#buscador i{
+    font-size: 16px;
+}
+
+#cuenta{
+
+    font-size: 20px;
+    
+}
+
+#botonCuenta{
+    
+    padding: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+    background-color: var(--mostaza);
+    border-radius: 6px;
+    border: 2px solid black;
+}
+
+#carrito i{
+    font-size: 30px;
+    margin: 5px 10px;
+}
+
+header{
+    background-color: var(--logo);
+    padding-bottom: 10px;
+    position: fixed;
+    width: 100%;
+    
+}
+
+#contenedor-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#contenedor-2 li{
+    list-style: none;
+    border: solid 2px black;
+    padding: 0.5%;
+    margin: 1%;
+    background-color: var(--beige);
+    min-width: 20%;
+    text-align: center;
+}
+
+#contenedor-2 li:hover {
+    background-color: #d2e603;
+    cursor: pointer;
+}
+
+#contenedor-2 li a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    color: var(--mostaza);
+}
+ 
+footer {
+    
+    background-color: var(--verde-2);
+    margin-top: 80px;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: space-between;
+    border-top: var(--logo) 3px double
+ 
+}
+
+footer #info2 {
+    /*float: left;*/
+    margin-left: 100px;
+}
+
+footer #redes {
+    /*float: right;*/
+    margin-right: 100px;
+}
+
+#redes i {
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#redes h4{
+    text-align: center;
+}
+
+#subredes {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+h1{
+    text-align: center;
+}
+
+main{
+    padding-top: 235px;
+}
+
+#login{
+    border: 3px solid var(--verde-2);
+    width: 350px;
+    height: 350px;
+    margin: 20px auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: var(--verde-1);
+    border-radius: 10px;
+}
+
+#login h3{
+    margin: 10px auto;
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+
+
+#campo-mail, #campo-pass{
+    margin: 20px auto;
+
+}
+
+#login #campo-mail input{
+    width: 250px;
+    height: 25px
+
+}
+
+#login #campo-pass input{
+    width: 250px;
+    height: 25px
+
+}
+
+#login #nuevoPass{
+    font-size: 14px;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+#login #registro{
+    font-size: 14px;
+    padding-top: 10px;
+    text-align: right;
+}
+
+
+#recordar{
+    font-size: 15px;
+
+}
+#recordar input{
+    display: inline;
+}
+#recordar label{
+    display: inline;
+}
+
+body{
+    background-color: var(--beige);
+}
+
+
+@media (min-width: 768px){
+    #contenedor-2{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #buscador input{
+
+        height: 30px;
+        font-size: 25px;
+        margin: 5px;
+    }
+
+    main{
+        padding-top: 200px;
+    }
+
+}
