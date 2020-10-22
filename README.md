@@ -31,3 +31,8 @@ JUMBO - https://www.jumbo.com.ar/
 
 Los sitios mencionados fueron elegidos porque ofrecían, entre otros, productos comestibles y permiten el armado de una compra con la funcionalidad del “carrito” que brinda al usuario la posibilidad de elegir entre los productos disponibles.
 A su vez, hemos tomado de ellos algunos aspectos del diseño de la página en lo que respecta al acceso a los productos, barras de búsqueda y secciones.
+
+
+Enlace a TRELLO
+
+https://trello.com/b/85DaummP/tablero-sprint-2
