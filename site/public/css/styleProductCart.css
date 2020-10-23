@@ -1,197 +1,185 @@
 body {
-    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    height: 100%;
-    margin: 0 auto; 
-    background-color: var(--beige);
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
+  margin: 0 auto;
+  background-color: var(--beige);
 }
 
-:root{
-    --verde-1: #2ec1ac;
-    --verde-2: #3e978b;
-    --mostaza: #d2e603;
-    --beige: #eff48e;
-    --logo: #374251
+:root {
+  --verde-1: #2ec1ac;
+  --verde-2: #3e978b;
+  --mostaza: #d2e603;
+  --beige: #eff48e;
+  --logo: #374251;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+/*------------------- comienzo del header-----------------------*/
 
-  /*------------------- comienzo del header-----------------------*/
-
-header{
-    background-color: var(--logo);
-    padding: 15px;
-    position: fixed;
-    width: 100%;
-    
+header {
+  background-color: var(--logo);
+  padding: 15px;
+  position: fixed;
+  width: 100%;
 }
 
 #container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
-#logo{
-    width: 15%;
+#logo {
+  width: 15%;
 }
 
-#buscador input{
-
-    height: 20px;
-    margin: 5px;
-    font-size: 18px;
-    padding: 15px;
+#buscador input {
+  height: 20px;
+  margin: 5px;
+  font-size: 18px;
+  padding: 15px;
 }
 
-#cuenta{
-
-    font-size: 20px;
-    
+#cuenta {
+  font-size: 20px;
 }
 
-#botonCuenta{
-    
-    padding: 10px;
-    font-weight: 400;
-    font-size: 16px;
-    background-color: #2ec1ac;
-    border: none;
+#botonCuenta {
+  padding: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #2ec1ac;
+  border: none;
 }
 
-#carrito i{
-    font-size: 20px;
-    margin: 5px 10px;
+#carrito i {
+  font-size: 20px;
+  margin: 5px 10px;
 }
 
-
-#container li{
-    list-style: none;
-    padding: 0.5%;
-    margin: 1%;
-    background-color: var(--beige);
-    min-width: 20%;
-    text-align: center;
+#container li {
+  list-style: none;
+  padding: 0.5%;
+  margin: 1%;
+  background-color: var(--beige);
+  min-width: 20%;
+  text-align: center;
 }
 
 #container li:hover {
-    background-color: #d2e603;
-    cursor: pointer;
+  background-color: #d2e603;
+  cursor: pointer;
 }
 
 #container li a {
-    text-decoration: none;
-    color: black;
-    font-size: 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
 }
 
 i {
-    color: var(--mostaza);
+  color: var(--mostaza);
 }
- 
+
 /*-------------------fin del header-----------------------*/
 
 /*-------------------comienzo del main-----------------------*/
 
 #mi-carrito {
-    padding: 20px; 
-    width: 100%;
-    background-color: #eff48e;
+  padding: 20px;
+  width: 100%;
+  background-color: #eff48e;
 }
 
 #mi-carrito i {
-    font-size: 25px;
-    float: left;
-    margin-right: 20px;
+  font-size: 25px;
+  float: left;
+  margin-right: 20px;
 }
 
 #total {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 25px 10px 10px; 
-    padding: 10px;
-    float: right;
-    z-index: 20;
-
+  display: flex;
+  flex-direction: column;
+  margin: 10px 25px 10px 10px;
+  padding: 10px;
+  float: right;
+  z-index: 20;
 }
 #menu-carrito {
-    background-color: #2ec1ac; 
-    font-size: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-
+  background-color: #2ec1ac;
+  font-size: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 #menu-carrito li {
-    float: left;
-    margin: 25px;
-    padding-left: 15px; 
-    list-style: none;
-
+  float: left;
+  margin: 25px;
+  padding-left: 15px;
+  list-style: none;
 }
-main{
-    padding-top: 200px;
+main {
+  padding-top: 200px;
 }
 article {
-    background-color: #2ec1ac   ;
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
+  background-color: #2ec1ac;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .main-article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 article img {
-    margin: 20px; 
+  margin: 20px;
 }
 
 .description {
-    margin: 20px; 
+  margin: 20px;
 }
 
 .cantidad {
-    margin: 20px; 
+  margin: 20px;
 }
 .precio {
-    margin: 20px; 
+  margin: 20px;
 }
 .subtotal {
-    margin: 20px; 
+  margin: 20px;
 }
 /*-------------------fin del main-----------------------*/
 
 /*------------------- comienzo de info-----------------------*/
 
 #info {
-    display: flex;
-    justify-content: space-around;
-    margin: 100px auto;
-    text-align: center;
+  display: flex;
+  justify-content: space-around;
+  margin: 100px auto;
+  text-align: center;
 }
 
 #info i {
-    color: var(--verde-2);
-    font-size: 25px;
-    padding-bottom: 10px;
-    
+  color: var(--verde-2);
+  font-size: 25px;
+  padding-bottom: 10px;
 }
 
 #info p {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 /*---------------------------fin de info------------------------*/
@@ -199,53 +187,51 @@ article img {
 /*------------------- comienzo del footer-----------------------*/
 
 footer {
-    
-    background-color: var(--verde-2);
-    margin-top: 80px;
-    padding: 50px 50px;
-    display: flex;
-    justify-content: space-between;
- 
+  background-color: var(--verde-2);
+  margin-top: 80px;
+  padding: 50px 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer #info2 {
-    /*float: left;*/
-    margin-left: 100px;
+  /*float: left;*/
+  margin-left: 100px;
 }
 
 footer #info2 li {
-    list-style: none;
+  list-style: none;
 }
 footer #redes {
-    /*float: right;*/
-    margin-right: 100px;
+  /*float: right;*/
+  margin-right: 100px;
 }
 
 #redes i {
-    font-size: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
+  font-size: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-#redes h4{
-    text-align: center;
+#redes h4 {
+  text-align: center;
 }
 
 #subredes {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
 }
 
 /*------------------- fin del footer -----------------------*/
 
 /*------------------- comienzo de las reglas media queries-----------------------*/
-@media (min-width: 768px){
-    #container{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
+@media (min-width: 768px) {
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 /*------------------- fin de las reglas media queries-----------------------*/
