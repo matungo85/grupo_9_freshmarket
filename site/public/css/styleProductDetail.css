@@ -95,35 +95,28 @@ i {
 main {
   padding-top: 200px;
 }
+
 article {
-  padding: 10px;
+  padding: 50px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
-  background-color: aqua;
 }
 
-.main-article {
+.imagen {
   margin: 20px;
 }
 
-article img {
-  margin: 20px;
-}
-
-.description {
-  margin: 20px;
-}
-
-.cantidad {
-  margin: 20px;
-}
-.precio {
+.informacion {
   margin: 20px;
 }
 
 section h4 {
+  text-align: center;
+}
+
+section p {
   text-align: center;
 }
 
