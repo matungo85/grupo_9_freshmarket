@@ -152,6 +152,7 @@ article img {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  width: 200px;
 }
 
 button:hover {
@@ -163,6 +164,11 @@ table {
 }
 th {
   padding: 5px;
+}
+
+#btn-agregar {
+  width: 50px;
+  height: 25px;
 }
 /*-------------------fin del main-----------------------*/
 
