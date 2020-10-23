@@ -53,6 +53,7 @@
     background-color: var(--mostaza);
     border-radius: 6px;
     border: 2px solid black;
+    text-decoration: none;
 }
 
 #carrito i{
