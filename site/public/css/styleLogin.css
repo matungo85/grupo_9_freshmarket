@@ -10,6 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 
 #contenedor-1 {
@@ -103,19 +104,21 @@ footer {
     background-color: var(--verde-2);
     margin-top: 80px;
     padding: 50px 50px;
+    width: 100%;
+    overflow: auto;
     display: flex;
     justify-content: space-between;
-    border-top: var(--logo) 3px double
+    border-top: var(--logo) 3px double;
  
 }
 
 footer #info2 {
-    /*float: left;*/
+    
     margin-left: 100px;
 }
 
 footer #redes {
-    /*float: right;*/
+    
     margin-right: 100px;
 }
 
@@ -218,7 +221,7 @@ body{
 
     #buscador input{
 
-        height: 30px;
+        height: 25px;
         font-size: 25px;
         margin: 5px;
     }
