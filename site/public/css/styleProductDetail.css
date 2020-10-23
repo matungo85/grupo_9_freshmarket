@@ -1,7 +1,6 @@
 body {
   font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
   height: 100%;
-  margin: 0 auto;
   background-color: var(--beige);
 }
 
@@ -44,7 +43,6 @@ header {
 
 #container-nav li{
   list-style: none;
-  border: solid 2px black;
   padding: 0.5%;
   margin: 1%;
   background-color: var(--beige);
@@ -152,7 +150,7 @@ section p {
 
 #seccion-principal
  {
-  margin-top: 200px; 
+  margin-top: 10%; 
 }
 
 /*-------------------fin del main-----------------------*/
@@ -244,6 +242,14 @@ footer #redes {
     flex-direction: row;
     justify-content: space-around;
   }
+
+  #container-nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   #seccion-principal {
     margin-top: 3%;
   }

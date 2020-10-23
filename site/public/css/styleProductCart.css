@@ -1,7 +1,6 @@
 body {
   font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
   height: 100%;
-  margin: 0 auto;
   background-color: var(--beige);
 }
 
@@ -33,7 +32,6 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
 }
 
 #logo {
@@ -104,7 +102,6 @@ i {
   
   #container-nav li{
     list-style: none;
-    border: solid 2px black;
     padding: 0.5%;
     margin: 1%;
     background-color: var(--beige);
@@ -134,7 +131,7 @@ i {
   padding: 20px;
   width: 100%;
   background-color: #eff48e;
-  margin-top: 30%; 
+  margin-top: 20%; 
 }
 
 #mi-carrito i {
@@ -275,6 +272,12 @@ footer #redes {
 /*------------------- comienzo de las reglas media queries-----------------------*/
 @media (min-width: 768px) {
   #container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #container-nav {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
