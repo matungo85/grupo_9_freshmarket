@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
     <link rel="stylesheet" href="/css/styleProductCart.css">
-    
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
+<!---- comienza del body -->  
+
 <body>
+    <!---- comienzo del header -->  
+
     <header>
-        <div id="contenedor-1">
+        <div id="container">
             <img src="/images/logo.png" alt="" id='logo'>
             
             <div id='buscador'>
@@ -22,23 +24,36 @@
             </div>
             <div id=cuenta>
                 <i class="fas fa-user"></i>
-                <button id='botonCuenta'>Mi Cuenta</button>
+                <button id='botonCuenta'>Mi cuenta</button>
             </div>
             <div id="carrito">
                 <i class="fas fa-shopping-cart"></i>
             </div>
         </div>
         <nav>
-            <ul id='contenedor-2'>
-                <li><a href="#">ALMACEN</a></li>
+            <ul id='container'>
+                <li><a href="#">ALMACÉN</a></li>
                 <li><a href="#">FRUTAS Y VERDURAS</a></li>
-                <li><a href="#">PANADERIA</a></li>
-                <li><a href="#">CARNICERIA</a></li>
+                <li><a href="#">PANADERÍA</a></li>
+                <li><a href="#">CARNICERÍA</a></li>
             </ul>
         </nav>
     </header>
+    <!---- comienzo del main --> 
     <main>
-        <section>
+        <section id="mi-carrito">
+            <i class="fas fa-shopping-cart"></i>
+            <h1>Mi carrito</h1>
+        </section>
+        <section id="productos">
+            <div id="menu-carrito">
+                <ul>
+                    <li>Producto</li>
+                    <li>Cantidad</li>
+                    <li>Precio unitario</li>
+                    <li>Subtotal</li>
+                </ul>
+            </div>
             <article>
                 <div class="main-article">
                     <img src="/images/tomate.jpg" alt="tomate" width="200px">
@@ -76,8 +91,12 @@
                 </div>
             </article>
         </section>
+        <section id="total">
+            <h3>Total</h3>
+            <h4>Finalizar pedido</h4>
+            <h4>Seguir comprando</h4>
+        </section>
         <section>
-
             <div id='info'>
                 <div>
                     <i class="far fa-question-circle"></i>
@@ -94,12 +113,9 @@
                     <p>Forma de Pago</p>
                 </div>
             </div>
-
-
         </section>
-
     </main>
-    
+   <!---- comienzo del footer -->  
     <footer>
         <div id='info2'>
             <ul>
@@ -109,7 +125,6 @@
                 <li>Atención al Cliente</li>
             </ul>
         </div>
-
         <div id='redes'>
             <h4>Seguinos en</h4>
             <div id='subredes'>

@@ -100,59 +100,21 @@ i {
 
 /*-------------------comienzo del main-----------------------*/
 
-#mi-carrito {
-    padding: 20px; 
-    width: 100%;
-    background-color: #eff48e;
-}
 
-#mi-carrito i {
-    font-size: 25px;
-    float: left;
-    margin-right: 20px;
-}
-
-#total {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 25px 10px 10px; 
-    padding: 10px;
-    float: right;
-    z-index: 20;
-
-}
-#menu-carrito {
-    background-color: #2ec1ac; 
-    font-size: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-
-}
-
-#menu-carrito li {
-    float: left;
-    margin: 25px;
-    padding-left: 15px; 
-    list-style: none;
-
-}
 main{
     padding-top: 200px;
 }
 article {
-    background-color: #2ec1ac   ;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
+    background-color: aqua;
 }
 
 .main-article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around ;
+    margin: 20px;
 }
 
 article img {
@@ -169,9 +131,11 @@ article img {
 .precio {
     margin: 20px; 
 }
-.subtotal {
-    margin: 20px; 
+
+section h4 {
+    text-align: center;
 }
+
 /*-------------------fin del main-----------------------*/
 
 /*------------------- comienzo de info-----------------------*/
