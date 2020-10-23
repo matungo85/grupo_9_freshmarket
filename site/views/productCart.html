@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de compras</title>
     <link rel="stylesheet" href="/css/styleProductCart.css">
-    
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
 </head>
+<!---- comienza del body -->  
+
 <body>
+    <!---- comienzo del header -->  
+
     <header>
-        <div id="contenedor-1">
+        <div id="container">
             <img src="/images/logo.png" alt="" id='logo'>
             
             <div id='buscador'>
@@ -22,62 +24,76 @@
             </div>
             <div id=cuenta>
                 <i class="fas fa-user"></i>
-                <button id='botonCuenta'>Mi Cuenta</button>
+                <button id='botonCuenta'>Mi cuenta</button>
             </div>
             <div id="carrito">
                 <i class="fas fa-shopping-cart"></i>
             </div>
         </div>
         <nav>
-            <ul id='contenedor-2'>
-                <li><a href="#">ALMACEN</a></li>
+            <ul id='container-nav'>
+                <li><a href="#">ALMACÉN</a></li>
                 <li><a href="#">FRUTAS Y VERDURAS</a></li>
-                <li><a href="#">PANADERIA</a></li>
-                <li><a href="#">CARNICERIA</a></li>
+                <li><a href="#">PANADERÍA</a></li>
+                <li><a href="#">CARNICERÍA</a></li>
             </ul>
         </nav>
     </header>
+    <!---- comienzo del main --> 
     <main>
-        <section>
-            <article>
+        <section id="mi-carrito">
+            <i class="fas fa-shopping-cart"></i>
+            <h1>Mi carrito</h1>
+        </section>      
                 <div class="main-article">
-                    <img src="/images/tomate.jpg" alt="tomate" width="200px">
-                    <h4 class="description">Tomates</h4>
-                    <p class="cantidad">5</p>
-                    <p class="precio">$55</p>
-                    <p class="subtotal">$120</p>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Subtotal</th>
+                        </tr>
+                        <tr>
+                            <th><img src="/images/tomate.jpg" alt="tomate" width="100px"></th>
+                            <th><h4 class="description">Tomates</h4></th>
+                            <th>
+                                <input id="btn-agregar"
+                                type="number"></th>
+                            <th><p class="precio">$55</p></th>
+                            <th><p class="subtotal">$120</p></th>
+                        </tr>
+                        <tr>
+                            <th><img src="/images/zanahoria.jpg" alt="zabahoria" width="100px"></th>
+                            <th><h4 class="description">Zanahoria</h4></th>
+                            <th>
+                                <input id="btn-agregar" type="number"></th>
+                            <th><p class="precio">$55</p></th>
+                            <th><p class="subtotal">$120</p></th>
+                        </tr>
+                        <tr>
+                            <th><img src="/images/pan.jpg" alt="pan" width="100px"></th>
+                            <th><h4 class="description">Pan</h4></th>
+                            <th>
+                                <input id="btn-agregar" type="number"></th>
+                            <th><p class="precio">$55</p></th>
+                            <th><p class="subtotal">$120</p></th>
+                        </tr>
+                        <tr>
+                            <th>Total</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th>$480</th> 
+                        </tr>
+                    </table> 
                 </div>
-            </article> 
-            <article>
-                <div class="main-article">
-                    <img src="/images/tomate.jpg" alt="tomate" width="200px">
-                    <h4 class="description">Tomates</h4>
-                    <p class="cantidad">5</p>
-                    <p class="precio">$55</p>
-                    <p class="subtotal">$120</p>
-                </div>
-            </article>
-            <article>
-                <div class="main-article">
-                    <img src="/images/tomate.jpg" alt="tomate" width="200px">
-                    <h4 class="description">Tomates</h4>
-                    <p class="cantidad">5</p>
-                    <p class="precio">$55</p>
-                    <p class="subtotal">$120</p>
-                </div>
-            </article>
-            <article>
-                <div class="main-article">
-                    <img src="/images/tomate.jpg" alt="tomate" width="200px">
-                    <h4 class="description">Tomates</h4>
-                    <p class="cantidad">5</p>
-                    <p class="precio">$55</p>
-                    <p class="subtotal">$120</p>
-                </div>
-            </article>
+        </section>
+        <section id="total">
+            <button type="button">Finalizar pedido</button>
+            <button type="button">Seguir comprando</button>
         </section>
         <section>
-
             <div id='info'>
                 <div>
                     <i class="far fa-question-circle"></i>
@@ -88,18 +104,14 @@
                     <i class="fas fa-truck"></i>
                     <p>Entrega</p>
                 </div>
-
                 <div>
                     <i class="fas fa-dollar-sign"></i>
                     <p>Forma de Pago</p>
                 </div>
             </div>
-
-
         </section>
-
     </main>
-
+   <!---- comienzo del footer -->  
     <footer>
         <div id='info2'>
             <ul>
@@ -109,7 +121,6 @@
                 <li>Atención al Cliente</li>
             </ul>
         </div>
-
         <div id='redes'>
             <h4>Seguinos en</h4>
             <div id='subredes'>

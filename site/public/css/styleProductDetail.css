@@ -1,0 +1,258 @@
+body {
+  font-family: "Segoe UI", "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
+  background-color: var(--beige);
+}
+
+:root {
+  --verde-1: #2ec1ac;
+  --verde-2: #3e978b;
+  --mostaza: #d2e603;
+  --beige: #eff48e;
+  --logo: #374251;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*------------------- comienzo del header-----------------------*/
+
+header {
+  background-color: var(--logo);
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+}
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#container-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+#container-nav li{
+  list-style: none;
+  padding: 0.5%;
+  margin: 1%;
+  background-color: var(--beige);
+  min-width: 20%;
+  text-align: center;
+}
+
+#container-nav li:hover {
+  background-color: #d2e603;
+  cursor: pointer;
+}
+
+#container-nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  color: var(--mostaza);
+}
+
+#logo {
+  width: 15%;
+}
+
+#buscador input {
+  height: 20px;
+  margin: 5px;
+  font-size: 18px;
+  padding: 15px;
+}
+
+#cuenta {
+  font-size: 20px;
+}
+
+#botonCuenta {
+  padding: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  background-color: #2ec1ac;
+  border: none;
+}
+
+#carrito i {
+  font-size: 20px;
+  margin: 5px 10px;
+}
+
+#container li {
+  list-style: none;
+  padding: 0.5%;
+  margin: 1%;
+  background-color: var(--beige);
+  min-width: 20%;
+  text-align: center;
+}
+
+#container li:hover {
+  background-color: #d2e603;
+  cursor: pointer;
+}
+
+#container li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+i {
+  color: var(--mostaza);
+}
+
+/*-------------------fin del header-----------------------*/
+
+/*-------------------comienzo del main-----------------------*/
+
+main {
+  padding-top: 200px;
+}
+
+article {
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.imagen {
+  margin: 20px;
+}
+
+.informacion {
+  margin: 20px;
+}
+
+section h4 {
+  text-align: center;
+}
+
+section p {
+  text-align: center;
+}
+
+#seccion-principal
+ {
+  margin-top: 10%; 
+}
+
+/*-------------------fin del main-----------------------*/
+
+/*------------------- comienzo de info-----------------------*/
+
+#info {
+  display: flex;
+  justify-content: space-around;
+  margin: 100px auto;
+  text-align: center;
+}
+
+#info i {
+  color: var(--verde-2);
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+#info p {
+  font-size: 15px;
+}
+
+#btn-agregar {
+  width: 50px;
+  height: 25px;
+}
+
+button {
+  padding: 15px;
+  margin: 10px;
+  background-color: #3e978b;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+/*---------------------------fin de info------------------------*/
+
+/*------------------- comienzo del footer-----------------------*/
+
+footer {
+  background-color: var(--verde-2);
+  margin-top: 80px;
+  padding: 50px 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer #info2 {
+  /*float: left;*/
+  margin-left: 100px;
+}
+
+footer #info2 li {
+  list-style: none;
+}
+footer #redes {
+  /*float: right;*/
+  margin-right: 100px;
+}
+
+#redes i {
+  font-size: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#redes h4 {
+  text-align: center;
+}
+
+#subredes {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+/*------------------- fin del footer -----------------------*/
+
+/*------------------- comienzo de las reglas media queries-----------------------*/
+@media (min-width: 768px) {
+  #container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #container-nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #seccion-principal {
+    margin-top: 3%;
+  }
+}
+
+/*------------------- fin de las reglas media queries-----------------------*/
