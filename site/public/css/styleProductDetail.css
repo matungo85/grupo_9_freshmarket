@@ -33,7 +33,37 @@ header {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+
+#container-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   flex-direction: column;
+}
+
+#container-nav li{
+  list-style: none;
+  border: solid 2px black;
+  padding: 0.5%;
+  margin: 1%;
+  background-color: var(--beige);
+  min-width: 20%;
+  text-align: center;
+}
+
+#container-nav li:hover {
+  background-color: #d2e603;
+  cursor: pointer;
+}
+
+#container-nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+i {
+  color: var(--mostaza);
 }
 
 #logo {
@@ -118,6 +148,11 @@ section h4 {
 
 section p {
   text-align: center;
+}
+
+#seccion-principal
+ {
+  margin-top: 200px; 
 }
 
 /*-------------------fin del main-----------------------*/
@@ -209,5 +244,9 @@ footer #redes {
     flex-direction: row;
     justify-content: space-around;
   }
+  #seccion-principal {
+    margin-top: 3%;
+  }
 }
+
 /*------------------- fin de las reglas media queries-----------------------*/

@@ -88,6 +88,43 @@ header {
 i {
   color: var(--mostaza);
 }
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #container-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  
+  #container-nav li{
+    list-style: none;
+    border: solid 2px black;
+    padding: 0.5%;
+    margin: 1%;
+    background-color: var(--beige);
+    min-width: 20%;
+    text-align: center;
+  }
+  
+  #container-nav li:hover {
+    background-color: #d2e603;
+    cursor: pointer;
+  }
+  
+  #container-nav li a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  i {
+    color: var(--mostaza);
+  }
 
 /*-------------------fin del header-----------------------*/
 
@@ -97,6 +134,7 @@ i {
   padding: 20px;
   width: 100%;
   background-color: #eff48e;
+  margin-top: 30%; 
 }
 
 #mi-carrito i {
@@ -241,6 +279,9 @@ footer #redes {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+  }
+  #mi-carrito {
+      margin-top: 1%;
   }
 }
 /*------------------- fin de las reglas media queries-----------------------*/
