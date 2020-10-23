@@ -6,13 +6,12 @@
     --logo: #374251
 }
 
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
-  
+
 #contenedor-1 {
     display: flex;
     flex-wrap: wrap;
@@ -105,7 +104,6 @@ i {
 
 /*-------------------Fin del Header-----------------------*/
 
-
 body {
 
     background-color: var(--beige);
@@ -151,13 +149,14 @@ footer {
 }
 
 footer #info2 {
+
     /*float: left;*/  
     margin-left: 100px;
 }
 
 
 footer #redes {
-    /*float: right;*/    
+    /*float: right;*/   
     margin-right: 100px;
 }
 
@@ -223,8 +222,5 @@ footer #redes {
         font-weight: bold;
     }
     
-}
-
-
 
 
