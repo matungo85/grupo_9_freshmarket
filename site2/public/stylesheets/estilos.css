@@ -627,11 +627,10 @@ i {
         font-weight: bold;
     }
 
-    
-}
+  }
 
 @media (min-width: 1150px){
   main{
     padding-top: 200px;
-}
+  }
 }
