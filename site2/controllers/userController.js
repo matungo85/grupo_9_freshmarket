@@ -2,10 +2,10 @@ var controller = {};
 
 controller = {
     login: function(req, res) {
-        res.render('login');
+        res.render('user/login');
     },
     register: function(req, res) {
-        res.render('register');
+        res.render('user/register');
     },
 }
 

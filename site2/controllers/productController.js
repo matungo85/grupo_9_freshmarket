@@ -2,10 +2,10 @@ var controller = {};
 
 controller = {
     cart: function(req, res) {
-        res.render('productCart');
+        res.render('product/productCart');
     },
     detail: function (req, res){
-        res.render('productDetail');
+        res.render('product/productDetail');
     }
 }
 
