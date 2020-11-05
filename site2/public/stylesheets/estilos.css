@@ -75,7 +75,7 @@ main{
 
 main h1{
     text-align: center;
-    font-size: 70px;
+    font-size: 40px;
 }
 
 #contenedor-2{
@@ -204,9 +204,7 @@ footer #redes {
     justify-content: space-around;
     padding-top: 10px;
 }
-main{
-    padding-top: 235px;
-}
+
 
 #login{
     border: 3px solid var(--verde-2);
@@ -298,9 +296,7 @@ body{
     margin-right: 20px;
   }
   
-  main {
-    padding-top: 200px;
-  }
+
   
   .main-article {
     display: flex;
@@ -364,9 +360,7 @@ body{
     height: 25px;
   }
 
-  main {
-    padding-top: 200px;
-  }
+ 
   
   article {
     padding: 50px;
@@ -551,6 +545,9 @@ i {
 
 @media (min-width: 768px){
 
+    main{
+        padding-top: 150px;
+}
     #container {
         display: flex;
         flex-wrap: wrap;
@@ -630,8 +627,11 @@ i {
         font-weight: bold;
     }
 
-    main{
-        padding-top: 200px;
-    }
     
+}
+
+@media (min-width: 1150px){
+  main{
+    padding-top: 200px;
+}
 }
