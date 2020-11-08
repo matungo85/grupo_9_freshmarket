@@ -429,30 +429,31 @@ body{
     text-decoration: none;
     display: inline-block;
   }
-
+/*----------------------Comienzo de register---------------------*/
   #datos {
     display: flex;
     flex-direction: column;
-}
-#datos h2 {
-    text-align: left;
-    margin: 50px;
-    font-size: 25px;
-}
+  }
 
-#datos div {
-    width: 80%;
-    margin-top: 15px;
-    margin-left: 50px;
-    font-size: 25px;
+  #datos h2 {
+      text-align: left;
+      margin: 50px;
+      font-size: 25px;
+  }
 
+  #datos div {
+      width: 80%;
+      margin-top: 15px;
+      margin-left: 50px;
+      font-size: 25px;
+  }
 
-}
+  #datos input {
+  float: right;
+  margin-right: 50px;
+  }
 
-#datos input {
-float: right;
-margin-right: 50px;
-}
+  /*------------------------Fin de register----------------------*/
 
 #container {
   display: flex;
@@ -628,6 +629,29 @@ i {
     }
 
   }
+  /*------------------------Comienzo de productLoad------------*/
+    #productLoad {
+      display: flex;
+      flex-direction: column;
+    }
+    #productLoad h2 {
+      text-align: left;
+      margin-top: 50px;
+      margin-left: 25px;
+    }
+    #productLoad label {
+      float: left;
+      width: 250px;
+    }
+
+    #productLoad div {
+      margin: 20px;
+    }
+    
+
+
+
+  /*------------------------Fin de productLoad-----------------*/
 
 @media (min-width: 1150px){
   main{
