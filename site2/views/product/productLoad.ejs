@@ -12,60 +12,61 @@
     <Main>
       
         <form id="datos" action="#" method="POST" enctype="multipart/form-data">
-         
-         <h1>Agregar un producto</h1>
-            
-         <div class="productLoad">
-            <h2>Nombre y Descripción</h2>
-            <label for="productName">Nombre del producto</label> 
-            <br>
-            <input type="text" name="productName" placeholder="Ej: Aceite de Oliva"> 
-            <br>
-            <label for="productDescription">Descripción</label>
-            <br>
-            <textarea name="productDescription" id="#"cols="40" rows="10" placeholder= "Acá va la descripción del producto"></textarea>
-        
-         </div>
-        
-         <div class="productLoad">   
-            <div>
-               <label for="Price">Precio</label> 
-               <br>
-               <input type="number" name="Price"> 
-            </div>
-
-            <div>
-               <label for="stock">Stock</label>
-               <br>
-               <input type="number" name="stock">
-            </div>
-
-            <div class="productLoad">
-               <label for="category">Categoría</label>
-               <br>
-               <select name="category" id="#">
-                  <option value="almacen">Almacén</option>
-                  <option value="verduleria">Frutas y Verduras</option>
-                  <option value="panaderia">Panaderia</option>
-                  <option value="carniceria">Carniceria</option>
-               </select>
-            </div>
-         </div>
          <div>
-            <div class="productLoad">
+               <h1>Agregar un producto</h1>
                
-               <label for="productImage"><h2>Fotos del producto</h2></label>
-               <input type="file" name="imageProduct">
+            
+               <div>
+                  <label for="productName">Nombre</label>  
+                  <input type="text" name="productName" placeholder="Ej: Aceite de Oliva"> 
+               </div>
 
-            </div>
-        
+               <div>
+                  <label for="brand">Marca</label>
+                  <input type="text" name="brand" placeholder="Ej: Arauco">
+               </div>
+
+               <div>
+                  <label for="price">Precio Unitario</label>   
+                  <input type="number" name="price" placeholder="$"> 
+               </div>
+
+               <div>
+                  <label for="discount">Precio en Promoción</label>   
+                  <input type="number" name="discount" placeholder="$"> 
+               </div>
+
+               <div>
+                  <label for="category">Categoría</label>
+                  <select name="category" id="#">
+                     <option value="almacen">Almacén</option>
+                     <option value="verduleria">Frutas y Verduras</option>
+                     <option value="panaderia">Panaderia</option>
+                     <option value="carniceria">Carniceria</option>
+                  </select>
+               </div>
+
+               <div>
+                  <label for="stock">Stock</label>
+                  <input type="number" name="stock">
+               </div>
+
+
+               <div>
+                  <label for="productDescription">Descripción</label>
+                  <textarea name="productDescription" id="#"cols="40" rows="10" placeholder= "Acá va la descripción del producto"></textarea>
+               </div>
+
+               
+               <div>
+                  <label for="productImage">Agregar imagen</label>
+                  <input type="file" name="imageProduct">
+               </div>
+            
+               <div>
+                  <button type="button">Publicar producto</button>
+               </div>
          </div>
-
-         
-         <div>
-            <button type="button">Publicar producto</button>
-         </div>
-
 
         </form>
       
