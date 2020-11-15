@@ -11,32 +11,32 @@
 
     <Main>
       <div class="form-to-create">
-        <form id="productLoad" action="#" method="POST" enctype="multipart/form-data">
+        <form id="productLoad" method="POST" action="/product/load"  enctype="multipart/form-data">
          <div>
                <h2>Agregar un producto</h2>
                <div>
                   <label for="productName">Nombre</label>  
-                  <input type="text" name="productName" placeholder="Ej: Aceite de Oliva"> 
+                  <input type="text" name="productName" id="productName" placeholder="Ej: Aceite de Oliva"> 
                </div>
 
                <div>
                   <label for="brand">Marca</label>
-                  <input type="text" name="brand" placeholder="Ej: Arauco">
+                  <input type="text" name="brand" id="brand" placeholder="Ej: Arauco">
                </div>
 
                <div>
                   <label for="price">Precio Unitario</label>   
-                  <input type="number" name="price" placeholder="$"> 
+                  <input type="number" name="price" id="price" placeholder="$"> 
                </div>
 
                <div>
                   <label for="discount">Precio en Promoción</label>   
-                  <input type="number" name="discount" placeholder="$"> 
+                  <input type="number" name="discount" id="discount" placeholder="$"> 
                </div>
 
                <div>
                   <label for="category">Categoría</label>
-                  <select name="category" id="#">
+                  <select name="category" id="category">
                      <option value="almacen">Almacén</option>
                      <option value="verduleria">Frutas y Verduras</option>
                      <option value="panaderia">Panaderia</option>
@@ -46,13 +46,13 @@
 
                <div>
                   <label for="stock">Stock</label>
-                  <input type="number" name="stock">
+                  <input type="number" name="stock" id="stock">
                </div>
 
 
                <div>
                   <label for="productDescription">Descripción</label>
-                  <textarea name="productDescription" id="#"cols="40" rows="10" placeholder= "Incorporá aquí una descripción del producto"></textarea>
+                  <textarea name="productDescription" id="productDescription"cols="40" rows="10" placeholder= "Incorporá aquí una descripción del producto"></textarea>
                </div>
 
                
