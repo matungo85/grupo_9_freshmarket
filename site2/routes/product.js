@@ -17,7 +17,7 @@ var upload = multer({ storage: storage })
 
 router.get('/cart', productController.cart);
 
-router.get('/detail', productController.detail);
+router.get('/detail/:id', productController.detail);
 
 router.get('/load', productController.load);
 

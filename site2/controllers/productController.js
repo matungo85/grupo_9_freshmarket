@@ -7,7 +7,17 @@ controller = {
         res.render('product/productCart');
     },
     detail: function (req, res){
-        res.render('product/productDetail');
+        const id = req.params.id;
+
+        const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
+        
+        const productosJson = fs.readFileSync(productsFilePath, 'utf-8');
+
+        productosArray = JSON.parse(productosJson);
+
+        producto = productosArray.find((producto) => producto.id == id)
+
+        res.render('product/productDetail', {producto: producto});
     },
     load: function(req, res) {
         res.render ('product/productLoad');
@@ -51,6 +61,7 @@ controller = {
 
         res.redirect('/');
     }
+
 
 }
 
