@@ -12,11 +12,26 @@ controller = {
     load: function(req, res) {
         res.render ('product/productLoad');
     },
-    store: function(req, res) {
+    store: function(req, res, next) {
 
-        console.log(req.body);
+        const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
         
+        const contenidoProductos = fs.readFileSync(productsFilePath, 'utf-8');
+
+        let productos;
+        let productId;
+
+        if (contenidoProductos == ''){
+            productos = [];
+            productId = 1
+        } else {
+            productos = JSON.parse(contenidoProductos);
+            productId = productos[productos.length - 1].id + 1
+        }
+
+
         let newProduct = {
+            id: productId,
             name: req.body.productName,
             brand: req.body.brand,
             price: req.body.price,
@@ -24,26 +39,15 @@ controller = {
             category: req.body.category,
             stock: req.body.stock,
             description: req.body.description,
-        }
+            image: req.files[0].filename,
+        }       
         
-
-        const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
         
-        const contenidoProductos = fs.readFileSync(productsFilePath, 'utf-8');
-
-        let productos;
-
-        if (contenidoProductos == ''){
-            productos = [];
-        } else {
-            productos = JSON.parse(contenidoProductos);
-        }
-
         productos.push(newProduct);
 
-        const productosJson = JSON.stringify(productos, null, '');
+        const NuevosProductosJson = JSON.stringify(productos, null, ' ');
 
-        fs.writeFileSync(productsFilePath, productosJson);
+        fs.writeFileSync(productsFilePath, NuevosProductosJson);
 
         res.redirect('/');
     }
