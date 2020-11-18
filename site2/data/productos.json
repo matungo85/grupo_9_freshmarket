@@ -18,5 +18,15 @@
   "category": "almacen",
   "stock": "30",
   "image": "imageProduct-1605577547802.jpeg"
+ },
+ {
+  "id": 3,
+  "name": "tomate",
+  "brand": "lll",
+  "price": "100",
+  "discount": "50",
+  "category": "verduleria",
+  "stock": "50",
+  "image": "imageProduct-1605665173493.JPG"
  }
 ]

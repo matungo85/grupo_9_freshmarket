@@ -2,6 +2,33 @@ const fs = require('fs')
 const path = require('path')
 var controller = {};
 
+function getAllProducts() {
+    
+    const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
+        
+    const contenidoProductos = fs.readFileSync(productsFilePath, 'utf-8');
+
+    if (contenidoProductos == ''){
+        return [];
+    } else {
+        return JSON.parse(contenidoProductos);
+    }
+
+}
+
+function saveProduct(product) {
+
+    let productos = getAllProducts();
+
+    productos.push(product);
+
+    const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
+
+
+}
+
 controller = {
     cart: function(req, res) {
         res.render('product/productCart');
@@ -9,11 +36,8 @@ controller = {
     detail: function (req, res){
         const id = req.params.id;
 
-        const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
-        
-        const productosJson = fs.readFileSync(productsFilePath, 'utf-8');
 
-        productosArray = JSON.parse(productosJson);
+        productosArray = getAllProducts();
 
         producto = productosArray.find((producto) => producto.id == id)
 
@@ -24,21 +48,9 @@ controller = {
     },
     store: function(req, res, next) {
 
-        const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
-        
-        const contenidoProductos = fs.readFileSync(productsFilePath, 'utf-8');
+        let productos = getAllProducts();
 
-        let productos;
-        let productId;
-
-        if (contenidoProductos == ''){
-            productos = [];
-            productId = 1
-        } else {
-            productos = JSON.parse(contenidoProductos);
-            productId = productos[productos.length - 1].id + 1
-        }
-
+        let productId = productos.length == 0 ? 1 : productos[productos.length - 1].id + 1
 
         let newProduct = {
             id: productId,
@@ -52,12 +64,7 @@ controller = {
             image: req.files[0].filename,
         }       
         
-        
-        productos.push(newProduct);
-
-        const NuevosProductosJson = JSON.stringify(productos, null, ' ');
-
-        fs.writeFileSync(productsFilePath, NuevosProductosJson);
+        saveProduct(newProduct)
 
         res.redirect('/');
     }
