@@ -1,32 +1,12 @@
 [
  {
   "id": 1,
-  "name": "cafe",
-  "brand": "dolca",
-  "price": "300",
-  "discount": "250",
-  "category": "almacen",
-  "stock": "200",
-  "image": "imageProduct-1605577486721.JPG"
- },
- {
-  "id": 2,
-  "name": "yerba",
-  "brand": "cruz de malta",
-  "price": "200",
-  "discount": "190",
-  "category": "almacen",
-  "stock": "30",
-  "image": "imageProduct-1605577547802.jpeg"
- },
- {
-  "id": 3,
-  "name": "tomate",
-  "brand": "lll",
-  "price": "100",
+  "name": "agua mineral",
+  "brand": "glaciar",
+  "price": "70",
   "discount": "50",
-  "category": "verduleria",
-  "stock": "50",
-  "image": "imageProduct-1605665173493.JPG"
+  "category": "almacen",
+  "stock": "100",
+  "image": "imageProduct-1605665664477.mp4"
  }
 ]

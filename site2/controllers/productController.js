@@ -36,7 +36,6 @@ controller = {
     detail: function (req, res){
         const id = req.params.id;
 
-
         productosArray = getAllProducts();
 
         producto = productosArray.find((producto) => producto.id == id)
