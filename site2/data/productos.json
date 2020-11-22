@@ -8,5 +8,17 @@
   "category": "almacen",
   "stock": "100",
   "image": "imageProduct-1605665664477.mp4"
+ },
+ {
+  "id": 2,
+  "name": "aceite",
+  "brand": "marolio",
+  "format": "500",
+  "format2": "mililitro",
+  "price": "300",
+  "discount": "250",
+  "category": "almacen",
+  "stock": "10",
+  "image": "imageProduct-1606061455897.png"
  }
 ]
