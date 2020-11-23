@@ -19,9 +19,9 @@ router.get('/cart', productController.cart);
 
 router.get('/detail/:id', productController.detail);
 
-router.get('/load', productController.load);
+router.get('/create', productController.load);
 
-router.post('/load', upload.any(), productController.store)
+router.post('/create', upload.any(), productController.store)
 
 router.get('/:id/edit', productController.edit);
 

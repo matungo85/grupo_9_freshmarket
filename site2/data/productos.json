@@ -20,5 +20,17 @@
   "category": "almacen",
   "stock": "10",
   "image": "imageProduct-1606061455897.png"
+ },
+ {
+  "id": 3,
+  "name": "yerba",
+  "brand": "Cruz de Malta",
+  "format": "500",
+  "format2": "gramos",
+  "price": "240",
+  "discount": "200",
+  "category": "almacen",
+  "stock": "50",
+  "image": "imageProduct-1606098344963.jpg"
  }
 ]
