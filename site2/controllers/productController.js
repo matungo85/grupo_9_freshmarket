@@ -122,7 +122,20 @@ controller = {
 
         res.redirect('/');
 
+    },
+
+    delete: function(req, res) {
+        
+        const id = req.params.id;
+
+        let products = getAllProducts;
+
+        let newProducts = products.filter((producto) => {producto.id != id });
+
+        saveProducts(newProducts);
     }
+
+
 
 
 }

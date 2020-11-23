@@ -518,6 +518,13 @@ i {
   color: var(--mostaza);
 }
 
+.products{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center
+}
+
 @media (min-width: 768px) {
   main {
     padding-top: 150px;
