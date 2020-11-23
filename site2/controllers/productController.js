@@ -55,6 +55,8 @@ controller = {
             id: productId,
             name: req.body.productName,
             brand: req.body.brand,
+            format: req.body.unidad,
+            format2: req.body.volumen,
             price: req.body.price,
             discount: req.body.discount,
             category: req.body.category,
@@ -66,6 +68,15 @@ controller = {
         saveProduct(newProduct)
 
         res.redirect('/');
+    },
+
+    edit: function(req, res){
+
+        let products = getAllProducts();
+        const id = req.params.id;
+        const productToEdit = products.find((product) => product.id == id);
+
+        res.render('product/productEdition', {product: productToEdit});
     }
 
 

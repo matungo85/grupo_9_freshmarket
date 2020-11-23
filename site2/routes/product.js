@@ -23,4 +23,6 @@ router.get('/load', productController.load);
 
 router.post('/load', upload.any(), productController.store)
 
+router.get('/:id/edit', productController.edit);
+
 module.exports = router;
