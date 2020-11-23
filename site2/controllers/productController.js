@@ -29,10 +29,24 @@ function saveProduct(product) {
 
 }
 
+function saveProducts(products) {
+    
+    const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
+
+}
+
 controller = {
     cart: function(req, res) {
         res.render('product/productCart');
     },
+
+    list: function(req, res) {
+        let products = getAllProducts();
+        res.render('product/list', {products: products});
+    },
+
     detail: function (req, res){
         const id = req.params.id;
 
@@ -77,6 +91,37 @@ controller = {
         const productToEdit = products.find((product) => product.id == id);
 
         res.render('product/productEdition', {product: productToEdit});
+    },
+
+    processEdit: function(req,res, next){
+
+        let products = getAllProducts();
+        const id = req.params.id;
+        console.log('llegue aca');
+
+        var newProducts = products.map(function (product) {
+            
+            if (product.id == id) {
+
+                product.name = req.body.productName;
+                product.brand = req.body.brand;
+                product.format = req.body.unidad;
+                product.format2 = req.body.volumen;
+                product.price = req.body.price;
+                product.discount = req.body.discount;
+                product.category = req.body.category;
+                product.stock = req.body.stock;
+                product.description = req.body.description;
+                product.image = (req.files[0]) ? req.files[0].filename : product.image;
+
+            }
+            return product;
+        })
+
+        saveProducts(newProducts);
+
+        res.redirect('/');
+
     }
 
 

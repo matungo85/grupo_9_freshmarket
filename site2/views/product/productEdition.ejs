@@ -12,7 +12,7 @@
     <Main>
       <div class="form-to-create">
       
-        <form id="productLoad" method="POST" action="/product/load"  enctype="multipart/form-data">
+        <form id="productLoad" method="POST" action="/product/<%= product.id %>?_method=PUT"  enctype="multipart/form-data">
          <div>
                <h2>Editar un producto</h2>
                <div>
