@@ -14,11 +14,35 @@
   "name": "aceite",
   "brand": "marolio",
   "format": "500",
-  "format2": "mililitro",
+  "format2": "kilo",
   "price": "300",
   "discount": "250",
   "category": "almacen",
   "stock": "10",
-  "image": "imageProduct-1606061455897.png"
+  "image": "imageProduct-1606101492214.jpg"
+ },
+ {
+  "id": 3,
+  "name": "yerba",
+  "brand": "Cruz de Malta",
+  "format": "500",
+  "format2": "gramos",
+  "price": "240",
+  "discount": "200",
+  "category": "almacen",
+  "stock": "50",
+  "image": "imageProduct-1606098344963.jpg"
+ },
+ {
+  "id": 4,
+  "name": "asado",
+  "brand": "freshmarket",
+  "format": "1",
+  "format2": "kilo",
+  "price": "250",
+  "discount": "220",
+  "category": "carniceria",
+  "stock": "100",
+  "image": "imageProduct-1606098708119.jpg"
  }
 ]
