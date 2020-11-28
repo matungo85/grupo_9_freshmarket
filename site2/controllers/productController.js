@@ -56,9 +56,12 @@ controller = {
 
         res.render('product/productDetail', {producto: producto});
     },
+    
     load: function(req, res) {
+
         res.render ('product/productCreate');
     },
+
     store: function(req, res, next) {
 
         let productos = getAllProducts();
