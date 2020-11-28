@@ -35,8 +35,7 @@ controller = {
     },
     detail: function (req, res){
         const id = req.params.id;
-
-
+        
         productosArray = getAllProducts();
 
         producto = productosArray.find((producto) => producto.id == id)
@@ -71,27 +70,23 @@ controller = {
 
     listar: (req, res) => {
 
-        let productos = getAllProducts();
+       if(req.params.category){
+        let category = req.params.category; 
 
-		const almacen = productos.filter((product) => {
-			return productos.category == 'almacen';
-		});
-		const verduleria = productos.filter((product) => {
-			return productos.category == 'verduleria';
+        const productos = getAllProducts().filter((product) => {
+			return product.category == category;
         });
-        const panaderia = productos.filter((product) => {
-			return productos.category == 'panaderia';
-        });
-        const carniceria = productos.filter((product) => {
-			return productos.category == 'carniceria';
+        
+		res.render('product/productList', {
+			productos: productos 
 		});
 
-		res.render('product/list/:category', {
-			almacenProducts: almacen,
-            verduleriaProducts: verduleria, 
-            panaderiaProducts: panaderia, 
-            carniceriaProducts: carniceria
+       }
+       else {
+        res.render('product/productList', {
+			productos: getAllProducts() 
 		});
+       }
 	},
 
 
