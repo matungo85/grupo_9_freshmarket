@@ -67,7 +67,32 @@ controller = {
         saveProduct(newProduct)
 
         res.redirect('/');
-    }
+    },
+
+    listar: (req, res) => {
+
+        let productos = getAllProducts();
+
+		const almacen = productos.filter((product) => {
+			return productos.category == 'almacen';
+		});
+		const verduleria = productos.filter((product) => {
+			return productos.category == 'verduleria';
+        });
+        const panaderia = productos.filter((product) => {
+			return productos.category == 'panaderia';
+        });
+        const carniceria = productos.filter((product) => {
+			return productos.category == 'carniceria';
+		});
+
+		res.render('product/list/:category', {
+			almacenProducts: almacen,
+            verduleriaProducts: verduleria, 
+            panaderiaProducts: panaderia, 
+            carniceriaProducts: carniceria
+		});
+	},
 
 
 }

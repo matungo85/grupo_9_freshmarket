@@ -21,6 +21,8 @@ router.get('/detail/:id', productController.detail);
 
 router.get('/load', productController.load);
 
+router.get ('/list/:category', productController.listar )
+
 router.post('/load', upload.any(), productController.store)
 
 module.exports = router;
