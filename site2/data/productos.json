@@ -12,7 +12,7 @@
  {
   "id": 2,
   "name": "aceite",
-  "brand": "marolio",
+  "brand": "natura",
   "format": "500",
   "format2": "kilo",
   "price": "300",
@@ -44,5 +44,17 @@
   "category": "carniceria",
   "stock": "100",
   "image": "imageProduct-1606098708119.jpg"
+ },
+ {
+  "id": 5,
+  "name": "harina",
+  "brand": "",
+  "format": "",
+  "format2": "kilo",
+  "price": "",
+  "discount": "",
+  "category": "almacen",
+  "stock": "",
+  "image": "imageProduct-1606596036833.jpeg"
  }
 ]

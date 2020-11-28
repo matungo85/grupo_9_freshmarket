@@ -19,11 +19,11 @@ router.get('/', productController.list);
 
 router.get('/cart', productController.cart);
 
-router.get('/:id', productController.detail);
+router.get('/:id/detail', productController.detail);
 
 router.get('/create', productController.load);
 
-router.post('/', upload.any(), productController.store)
+router.post('/create', upload.any(), productController.store);
 
 router.get('/:id/edit', productController.edit);
 
