@@ -19,7 +19,7 @@ router.get('/', productController.list);
 
 router.get('/cart', productController.cart);
 
-router.get('/:id', productController.detail);
+router.get('/:id/detail', productController.detail);
 
 router.get('/create', productController.load);
 
