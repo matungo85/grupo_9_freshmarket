@@ -92,9 +92,5 @@ controller = {
             panaderiaProducts: panaderia, 
             carniceriaProducts: carniceria
 		});
-	},
-
-
-}
 
 module.exports = controller;
