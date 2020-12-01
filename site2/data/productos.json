@@ -56,5 +56,30 @@
   "category": "almacen",
   "stock": "",
   "image": "imageProduct-1606596036833.jpeg"
+ },
+ {
+  "id": 6,
+  "name": "Harina",
+  "brand": "Marolio",
+  "format": "",
+  "format2": "gramos",
+  "price": "160",
+  "discount": "140",
+  "category": "almacen",
+  "stock": "200",
+  "image": "imageProduct-1606854909332.jpg"
+ },
+ {
+  "id": 7,
+  "name": "Harina",
+  "brand": "Marolio",
+  "format": "",
+  "format2": "gramos",
+  "price": "160",
+  "discount": "140",
+  "category": "almacen",
+  "stock": "200",
+  "description": "hbhbdhjcdb",
+  "image": "imageProduct-1606855013687.jpg"
  }
 ]
