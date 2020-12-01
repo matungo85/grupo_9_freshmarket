@@ -7,7 +7,8 @@
   "discount": "50",
   "category": "almacen",
   "stock": "100",
-  "image": "imageProduct-1605665664477.mp4"
+  "image": "imageProduct-1605665664477.mp4", 
+  "description": "Esta es una descripción genérica"
  },
  {
   "id": 2,
@@ -19,7 +20,8 @@
   "discount": "250",
   "category": "almacen",
   "stock": "10",
-  "image": "imageProduct-1606101492214.jpg"
+  "image": "imageProduct-1606101492214.jpg", 
+  "description": "Esta es una descripción genérica"
  },
  {
   "id": 3,
@@ -31,7 +33,8 @@
   "discount": "200",
   "category": "almacen",
   "stock": "50",
-  "image": "imageProduct-1606098344963.jpg"
+  "image": "imageProduct-1606098344963.jpg", 
+  "description": "Esta es una descripción genérica"
  },
  {
   "id": 4,
@@ -43,7 +46,8 @@
   "discount": "220",
   "category": "carniceria",
   "stock": "100",
-  "image": "imageProduct-1606098708119.jpg"
+  "image": "imageProduct-1606098708119.jpg", 
+  "description": "Esta es una descripción genérica"
  },
  {
   "id": 5,
