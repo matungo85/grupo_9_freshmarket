@@ -44,7 +44,7 @@ controller = {
 
     list: function(req, res) {
         let products = getAllProducts();
-        res.render('product/list', {products: products});
+        res.render('product/productList', {products: products});
     },
 
     detail: function (req, res){

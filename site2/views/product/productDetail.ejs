@@ -42,13 +42,14 @@
         <section id="seccion-principal">
             <article>
                 <div class="imagen">
-                    <img src="/images/<tomate.jpg>" alt="tomate" width="200px">
+                    <img src="/images/<%= producto.image%>" alt="tomate" width="200px">
                 </div>
                 <div class="informacion">
-                    <h4 class="description">Tomates</h4>
-                    <p class="codigo">#111111</p>
+                    <h4 class="name"><%= producto.name%></h4>
+                    <p class="description"><%= producto.description%></p>
+                    <p class="codigo"><%= producto.id%></p>
                     <br>
-                    <p class="precio">1 kilo por $55</p>
+                    <p class="precio"> $ <%= producto.price%> - <%= producto.format%> <%= producto.format2%></p>
                     <br>
                     <input id="btn-agregar" type="number">
                     <button type="button">Agregar</button>
