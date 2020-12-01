@@ -45,11 +45,12 @@
                     <img src="/images/<%= producto.image%>" alt="tomate" width="200px">
                 </div>
                 <div class="informacion">
-                    <h4 class="name"><%= producto.name%></h4>
+                    <h4 class="name"><%= producto.name%> - Marca <%= producto.brand%></h4>
                     <p class="description"><%= producto.description%></p>
                     <p class="codigo"><%= producto.id%></p>
                     <br>
                     <p class="precio"> $ <%= producto.price%> - <%= producto.format%> <%= producto.format2%></p>
+                    <p> <%= producto.discount%> % </p>
                     <br>
                     <input id="btn-agregar" type="number">
                     <button type="button">Agregar</button>
