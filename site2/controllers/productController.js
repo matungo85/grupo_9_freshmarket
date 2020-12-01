@@ -42,10 +42,27 @@ controller = {
         res.render('product/productCart');
     },
 
-    list: function(req, res) {
-        let products = getAllProducts();
-        res.render('product/productList', {products: products});
-    },
+    list: (req, res) => {
+
+        if(req.params.category){
+         let category = req.params.category; 
+ 
+         const products = getAllProducts().filter((product) => {
+             return product.category == category;
+         });
+
+         
+         res.render('product/productList', {
+             products: products 
+         });
+ 
+        }
+        else {
+         res.render('product/productList', {
+             products: getAllProducts() 
+         });
+        }
+     },
 
     detail: function (req, res){
         const id = req.params.id;
