@@ -11,16 +11,16 @@
     <%- include('../partials/header') %>
     <!---- comienzo del main --> 
     <main>
-        <!-- Muestra productos de almacén -->
-			<% for (product of almacenProducts) { %>
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <section class="product-box">
+        <!-- muestra productos -->
+			<% for (product of productos) { %>
+                <div>
+                    <section>
                         <a href="/products/detail/<%= product.id %>">
-                            <figure class="product-box_image">
+                            <figure>
                                 <img src="/images/products/<%= product.image %>" alt="imagen de producto">
                             </figure>
-                            <article class="product-box_data">
-                                <h2><%= product.productName %></h2>
+                            <article>
+                                <h2><%= product.name %></h2>
                                 <p><%= product.price %></p>
                                 <i class="fas fa-truck"></i>
                             </article>
@@ -30,7 +30,7 @@
                 <% } %>
             </div>
         </div>
-        <!-- /cierra productos de almacén -->
+        <!-- cierra productos -->
     </main>
    <!---- comienzo del footer -->  
     <%- include('../partials/footer')%>
