@@ -1,6 +1,8 @@
 [
  {
   "id": 1,
+  "name": "Yerba",
+  "brand": "cruz de malta",
   "name": "agua mineral",
   "brand": "glaciar",
   "price": "70",
@@ -219,11 +221,11 @@
   "brand": "Marolio",
   "format": "",
   "format2": "gramos",
-  "price": "160",
-  "discount": "140",
+  "price": "122",
+  "discount": "112",
   "category": "almacen",
-  "stock": "200",
-  "description": "hbhbdhjcdb",
-  "image": "imageProduct-1606855013687.jpg"
+  "stock": "10",
+  "description": "descrip",
+  "image": "imageProduct-1606869603565.jpg"
  }
 ]

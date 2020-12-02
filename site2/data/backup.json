@@ -1,0 +1,28 @@
+[
+    {
+     "id": 1,
+     "name": "Yerba",
+     "brand": "cruz de malta",
+     "format": "",
+     "format2": "gramos",
+     "price": "122",
+     "discount": "112",
+     "category": "almacen",
+     "stock": "10",
+     "description": "descrip",
+     "image": "imageProduct-1606869603565.jpg"
+    },
+    {
+     "id": 2,
+     "name": "aceite",
+     "brand": "Natura",
+     "format": "1",
+     "format2": "litro",
+     "price": "200",
+     "discount": "180",
+     "category": "almacen",
+     "stock": "20",
+     "description": "otra deesci",
+     "image": "imageProduct-1606869674476.jpg"
+    }
+   ]
