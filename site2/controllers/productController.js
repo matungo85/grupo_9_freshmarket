@@ -150,7 +150,9 @@ controller = {
 
         const products = getAllProducts();
 
-        const newProducts = products.filter((producto) => {parseInt(producto.id) != parseInt(id) });
+        const newProducts = products.filter((producto) => {if (producto.id != id) {
+            return producto
+        } });
         
         saveProducts(newProducts);
     }

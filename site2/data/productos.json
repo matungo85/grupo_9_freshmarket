@@ -1,1 +1,15 @@
-[]
+[
+ {
+  "id": 1,
+  "name": "Yerba",
+  "brand": "cruz de malta",
+  "format": "",
+  "format2": "gramos",
+  "price": "122",
+  "discount": "112",
+  "category": "almacen",
+  "stock": "10",
+  "description": "descrip",
+  "image": "imageProduct-1606869603565.jpg"
+ }
+]
