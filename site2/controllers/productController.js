@@ -148,10 +148,10 @@ controller = {
         
         const id = req.params.id;
 
-        let products = getAllProducts;
+        const products = getAllProducts();
 
-        let newProducts = products.filter((producto) => {producto.id != id });
-
+        const newProducts = products.filter((producto) => {parseInt(producto.id) != parseInt(id) });
+        
         saveProducts(newProducts);
     }
 
