@@ -50,19 +50,6 @@
   "image": "imageProduct-1606098708119.jpg"
  },
  {
-  "id": 5,
-  "name": "harina",
-  "brand": "",
-  "format": "",
-  "format2": "kilo",
-  "price": "",
-  "discount": "",
-  "category": "almacen",
-  "stock": "",
-  "description": "descripcion generica",
-  "image": "imageProduct-1606596036833.jpeg"
- },
- {
   "id": 6,
   "name": "Vacio",
   "brand": "Freshmarket",
@@ -217,8 +204,8 @@
   "stock": "6",
   "description": "descripcion generica",
   "image": "imageProduct-1606776159422.jpg"
-  },
-  {
+ },
+ {
   "id": 18,
   "name": "Harina",
   "brand": "Marolio",
