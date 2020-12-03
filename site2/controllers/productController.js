@@ -155,6 +155,8 @@ controller = {
         } });
         
         saveProducts(newProducts);
+        res.redirect('/');
+        
     }
 
 

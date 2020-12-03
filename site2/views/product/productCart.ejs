@@ -11,75 +11,77 @@
     <%- include('../partials/header') %>
     <!---- comienzo del main --> 
     <main>
-        <section id="mi-carrito">
-            <i class="fas fa-shopping-cart"></i>
-            <h1>Mi carrito</h1>
-        </section>      
-                <div class="main-article">
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
-                            <th>Subtotal</th>
-                        </tr>
-                        <tr>
-                            <th><img src="/images/tomate.jpg" alt="tomate" width="100px"></th>
-                            <th><h4 class="description">Tomates</h4></th>
-                            <th>
-                                <input id="btn-agregar"
-                                type="number"></th>
-                            <th><p class="precio">$55</p></th>
-                            <th><p class="subtotal">$120</p></th>
-                        </tr>
-                        <tr>
-                            <th><img src="/images/zanahoria.jpg" alt="zabahoria" width="100px"></th>
-                            <th><h4 class="description">Zanahoria</h4></th>
-                            <th>
-                                <input id="btn-agregar" type="number"></th>
-                            <th><p class="precio">$55</p></th>
-                            <th><p class="subtotal">$120</p></th>
-                        </tr>
-                        <tr>
-                            <th><img src="/images/pan.jpg" alt="pan" width="100px"></th>
-                            <th><h4 class="description">Pan</h4></th>
-                            <th>
-                                <input id="btn-agregar" type="number"></th>
-                            <th><p class="precio">$55</p></th>
-                            <th><p class="subtotal">$120</p></th>
-                        </tr>
-                        <tr>
-                            <th>Total</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                            <th>$480</th> 
-                        </tr>
-                    </table> 
-                </div>
-        </section>
-        <section id="total">
-            <button type="button">Finalizar pedido</button>
-            <button type="button">Seguir comprando</button>
-        </section>
-        <section>
-            <div id='info'>
-                <div>
-                    <i class="far fa-question-circle"></i>
-                    <p>Cómo comprar</p>
-                </div>
+        <div class="container">
+            <section id="mi-carrito">
+                <i class="fas fa-shopping-cart"></i>
+                <h1>Mi carrito</h1>
+            </section>      
+                    <div class="main-article">
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Subtotal</th>
+                            </tr>
+                            <tr>
+                                <th><img src="/images/tomate.jpg" alt="tomate" width="100px"></th>
+                                <th><h4 class="description">Tomates</h4></th>
+                                <th>
+                                    <input id="btn-agregar"
+                                    type="number"></th>
+                                <th><p class="precio">$55</p></th>
+                                <th><p class="subtotal">$120</p></th>
+                            </tr>
+                            <tr>
+                                <th><img src="/images/zanahoria.jpg" alt="zabahoria" width="100px"></th>
+                                <th><h4 class="description">Zanahoria</h4></th>
+                                <th>
+                                    <input id="btn-agregar" type="number"></th>
+                                <th><p class="precio">$55</p></th>
+                                <th><p class="subtotal">$120</p></th>
+                            </tr>
+                            <tr>
+                                <th><img src="/images/pan.jpg" alt="pan" width="100px"></th>
+                                <th><h4 class="description">Pan</h4></th>
+                                <th>
+                                    <input id="btn-agregar" type="number"></th>
+                                <th><p class="precio">$55</p></th>
+                                <th><p class="subtotal">$120</p></th>
+                            </tr>
+                            <tr>
+                                <th>Total</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>$480</th> 
+                            </tr>
+                        </table> 
+                    </div>
+            </section>
+            <section id="total">
+                <button type="button">Finalizar pedido</button>
+                <button type="button">Seguir comprando</button>
+            </section>
+            <section>
+                <div id='info'>
+                    <div>
+                        <i class="far fa-question-circle"></i>
+                        <p>Cómo comprar</p>
+                    </div>
 
-                <div>
-                    <i class="fas fa-truck"></i>
-                    <p>Entrega</p>
+                    <div>
+                        <i class="fas fa-truck"></i>
+                        <p>Entrega</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-dollar-sign"></i>
+                        <p>Forma de Pago</p>
+                    </div>
                 </div>
-                <div>
-                    <i class="fas fa-dollar-sign"></i>
-                    <p>Forma de Pago</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
    <!---- comienzo del footer -->  
     <%- include('../partials/footer')%>

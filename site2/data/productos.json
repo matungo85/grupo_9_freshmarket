@@ -1,70 +1,33 @@
 [
  {
-  "id": 1,
-  "name": "Yerba",
-  "brand": "cruz de malta",
-  "price": "70",
-  "discount": "50",
-  "category": "almacen",
-  "stock": "100",
-  "description": "descripcion generica",
-  "image": "imageProduct-1605665664477.mp4"
- },
- {
   "id": 2,
-  "name": "aceite",
-  "brand": "natura",
+  "name": "Aceite",
+  "brand": "Natura",
   "format": "500",
   "format2": "kilo",
   "price": "300",
   "discount": "250",
   "category": "almacen",
   "stock": "10",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606101492214.jpg"
  },
  {
   "id": 3,
-  "name": "yerba",
-  "brand": "Cruz de Malta",
+  "name": "Yerba",
+  "brand": "Cruz de malta",
   "format": "500",
   "format2": "gramos",
   "price": "240",
   "discount": "200",
   "category": "almacen",
   "stock": "50",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606098344963.jpg"
  },
  {
-  "id": 4,
-  "name": "asado",
-  "brand": "freshmarket",
-  "format": "1",
-  "format2": "kilo",
-  "price": "250",
-  "discount": "220",
-  "category": "carniceria",
-  "stock": "100",
-  "description": "descripcion generica",
-  "image": "imageProduct-1606098708119.jpg"
- },
- {
-  "id": 5,
-  "name": "harina",
-  "brand": "",
-  "format": "",
-  "format2": "kilo",
-  "price": "",
-  "discount": "",
-  "category": "almacen",
-  "stock": "",
-  "description": "descripcion generica",
-  "image": "imageProduct-1606596036833.jpeg"
- },
- {
   "id": 6,
-  "name": "Vacio",
+  "name": "Vacío",
   "brand": "Freshmarket",
   "format": "1",
   "format2": "kilo",
@@ -72,7 +35,7 @@
   "discount": "223",
   "category": "carniceria",
   "stock": "56",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606693387344.jpg"
  },
  {
@@ -85,7 +48,7 @@
   "discount": "275",
   "category": "carniceria",
   "stock": "60",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606693493160.jpg"
  },
  {
@@ -98,7 +61,7 @@
   "discount": "789",
   "category": "carniceria",
   "stock": "60",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606693602054.jpg"
  },
  {
@@ -111,7 +74,7 @@
   "discount": "455",
   "category": "carniceria",
   "stock": "20",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606774831499.jpg"
  },
  {
@@ -124,7 +87,7 @@
   "discount": "320",
   "category": "carniceria",
   "stock": "55",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606775055503.jpg"
  },
  {
@@ -137,7 +100,7 @@
   "discount": "125",
   "category": "carniceria",
   "stock": "33",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606775128032.jpg"
  },
  {
@@ -150,7 +113,7 @@
   "discount": "339",
   "category": "carniceria",
   "stock": "86",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606775253972.jpg"
  },
  {
@@ -163,7 +126,7 @@
   "discount": "365",
   "category": "carniceria",
   "stock": "29",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606775515405.jpg"
  },
  {
@@ -176,7 +139,7 @@
   "discount": "436",
   "category": "carniceria",
   "stock": "66",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606775642719.jpg"
  },
  {
@@ -189,12 +152,12 @@
   "discount": "499",
   "category": "carniceria",
   "stock": "5",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606775796031.jpg"
  },
  {
   "id": 16,
-  "name": "Carré Deshuesado",
+  "name": "Carré deshuesado",
   "brand": "",
   "format": "1",
   "format2": "kilo",
@@ -202,7 +165,7 @@
   "discount": "512",
   "category": "carniceria",
   "stock": "3",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606776015742.jpg"
  },
  {
@@ -215,10 +178,10 @@
   "discount": "539",
   "category": "almacen",
   "stock": "6",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606776159422.jpg"
-  },
-  {
+ },
+ {
   "id": 18,
   "name": "Harina",
   "brand": "Marolio",
@@ -228,7 +191,7 @@
   "discount": "140",
   "category": "almacen",
   "stock": "200",
-  "description": "descripcion generica",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606854909332.jpg"
  },
  {
@@ -241,7 +204,59 @@
   "discount": "112",
   "category": "almacen",
   "stock": "10",
-  "description": "descrip",
+  "description": "descripcion genérica",
   "image": "imageProduct-1606869603565.jpg"
+ },
+ {
+  "id": 20,
+  "name": "Pan de salvado",
+  "brand": "Fargo",
+  "format": "1",
+  "format2": "kilo",
+  "price": "60",
+  "discount": "45",
+  "category": "panaderia",
+  "stock": "12",
+  "description": "Esta es una descripción de panadería.",
+  "image": "imageProduct-1606959656759.jpg"
+ },
+ {
+  "id": 21,
+  "name": "Espinaca",
+  "brand": "Verdulería",
+  "format": "2",
+  "format2": "kilo",
+  "price": "300",
+  "discount": "20",
+  "category": "verduleria",
+  "stock": "3",
+  "description": "Esta es una descripción de verdulería. ",
+  "image": "imageProduct-1606960139896.jpg"
+ },
+ {
+  "id": 22,
+  "name": "Tomate",
+  "brand": "Freshmarket",
+  "format": "2",
+  "format2": "kilo",
+  "price": "180",
+  "discount": "20",
+  "category": "verduleria",
+  "stock": "5",
+  "description": "Esta es una descripción para verdulería. ",
+  "image": "imageProduct-1606960414088.jpeg"
+ },
+ {
+  "id": 23,
+  "name": "Pan blanco",
+  "brand": "Freshmarket",
+  "format": "1",
+  "format2": "kilo",
+  "price": "60",
+  "discount": "10",
+  "category": "panaderia",
+  "stock": "4",
+  "description": "Esta es una descripción de panadería. ",
+  "image": "imageProduct-1606960643521.jpg"
  }
 ]

@@ -13,47 +13,49 @@
 
     <!---- comienzo del main --> 
     <main>
-        <section id="seccion-principal">
-            <article>
-                <div class="imagen">
-                    <img src="/images/<%= producto.image%>" alt="tomate" width="200px">
+        <div class="container">
+            <section id="seccion-principal">
+                <article>
+                    <div class="imagen">
+                        <img src="/images/<%= producto.image%>" alt="tomate" width="200px">
+                    </div>
+                    <div class="informacion">
+                        <h4 class="name"><%= producto.name%> - Marca <%= producto.brand%></h4>
+                        <p class="description"><%= producto.description%></p>
+                        <p class="codigo"><%= producto.id%></p>
+                        <br>
+                        <p class="precio"> $ <%= producto.price%> - <%= producto.format%> <%= producto.format2%></p>
+                        <p> <%= producto.discount%> % </p>
+                        <br>
+                        <input id="btn-agregar" type="number">
+                        <button type="button">Agregar</button>
+                        <form action="/product/<%= producto.id%>?_method=DELETE" method="POST">
+                            <button type="submit">Borrar</button> 
+                        </form>
+                    </div>
+                </article> 
+            </section>
+            <section>
+                <h4>Descripción y especificaciones</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Temporibus et rerum voluptatum asperiores fuga, impedit voluptatibus.</p>
+            </section>
+            <section>
+                <div id='info'>
+                    <div>
+                        <i class="far fa-question-circle"></i>
+                        <p>Cómo comprar</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-truck"></i>
+                        <p>Entrega</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-dollar-sign"></i>
+                        <p>Forma de Pago</p>
+                    </div>
                 </div>
-                <div class="informacion">
-                    <h4 class="name"><%= producto.name%> - Marca <%= producto.brand%></h4>
-                    <p class="description"><%= producto.description%></p>
-                    <p class="codigo"><%= producto.id%></p>
-                    <br>
-                    <p class="precio"> $ <%= producto.price%> - <%= producto.format%> <%= producto.format2%></p>
-                    <p> <%= producto.discount%> % </p>
-                    <br>
-                    <input id="btn-agregar" type="number">
-                    <button type="button">Agregar</button>
-                    <form action="/product/<%= producto.id%>?_method=DELETE" method="POST">
-                        <button type="submit">Borrar</button> 
-                    </form>
-                </div>
-            </article> 
-        </section>
-        <section>
-            <h4>Descripción y especificaciones</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Temporibus et rerum voluptatum asperiores fuga, impedit voluptatibus.</p>
-        </section>
-        <section>
-            <div id='info'>
-                <div>
-                    <i class="far fa-question-circle"></i>
-                    <p>Cómo comprar</p>
-                </div>
-                <div>
-                    <i class="fas fa-truck"></i>
-                    <p>Entrega</p>
-                </div>
-                <div>
-                    <i class="fas fa-dollar-sign"></i>
-                    <p>Forma de Pago</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
    <!---- comienzo del footer -->  
    <%- include('../partials/footer')%>

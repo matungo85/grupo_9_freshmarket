@@ -9,77 +9,79 @@
 
     <%- include('../partials/header') %>   
 
-    <Main>
-      <div class="form-to-create">
-        <form id="productLoad" method="POST" action="/product/create"  enctype="multipart/form-data">
-         <div>
-               <h2>Agregar un producto</h2>
+    <main>
+       <div class="container">
+            <div class="form-to-create">
+            <form id="productLoad" method="POST" action="/product/create"  enctype="multipart/form-data">
                <div>
-                  <label for="productName">Nombre</label>  
-                  <input type="text" name="productName" id="productName" placeholder="Ej: Aceite de Oliva"> 
+                     <h2>Agregar un producto</h2>
+                     <div>
+                        <label for="productName">Nombre</label>  
+                        <input type="text" name="productName" id="productName" placeholder="Ej: Aceite de Oliva"> 
+                     </div>
+
+                     <div>
+                        <label for="brand">Marca</label>
+                        <input type="text" name="brand" id="brand" placeholder="Ej: Arauco">
+                     </div>
+
+                     <div>
+                        <label for="volumen">Unidad de volúmen/peso</label>
+                        <input type="number" name="unidad" id="unidad" placeholder="500">
+                        <select name="volumen" id="volumen">
+                           <option value="kilo">kilo(s)</option>
+                           <option value="gramos">gramos</option>
+                           <option value="litro">litro(s)</option>
+                           <option value="mililitro">mililitros</option>
+                        </select>
+                     </div>
+
+                     <div>
+                        <label for="price">Precio Unitario</label>   
+                        <input type="number" name="price" id="price" placeholder="$"> 
+                     </div>
+
+                     <div>
+                        <label for="discount">Precio en Promoción</label>   
+                        <input type="number" name="discount" id="discount" placeholder="$"> 
+                     </div>
+
+                     <div>
+                        <label for="category">Categoría</label>
+                        <select name="category" id="category">
+                           <option value="almacen">Almacén</option>
+                           <option value="verduleria">Frutas y Verduras</option>
+                           <option value="panaderia">Panaderia</option>
+                           <option value="carniceria">Carniceria</option>
+                        </select>
+                     </div>
+
+                     <div>
+                        <label for="stock">Stock</label>
+                        <input type="number" name="stock" id="stock">
+                     </div>
+
+
+                     <div>
+                        <label for="productDescription">Descripción</label>
+                        <textarea name="description" id="productDescription"cols="40" rows="10" placeholder= "Incorporá aquí una descripción del producto"></textarea>
+                     </div>
+
+                     
+                  <div>
+                        <label for="productImage">Agregar imagen</label>
+                        <input type="file" name="imageProduct">
+                     </div> 
+                  
+                     <div>
+                        <input type="submit" value="Agregar producto">
+                     </div>
                </div>
 
-               <div>
-                  <label for="brand">Marca</label>
-                  <input type="text" name="brand" id="brand" placeholder="Ej: Arauco">
-               </div>
-
-               <div>
-                  <label for="volumen">Unidad de volúmen/peso</label>
-                  <input type="number" name="unidad" id="unidad" placeholder="500">
-                  <select name="volumen" id="volumen">
-                     <option value="kilo">kilo(s)</option>
-                     <option value="gramos">gramos</option>
-                     <option value="litro">litro(s)</option>
-                     <option value="mililitro">mililitros</option>
-                  </select>
-               </div>
-
-               <div>
-                  <label for="price">Precio Unitario</label>   
-                  <input type="number" name="price" id="price" placeholder="$"> 
-               </div>
-
-               <div>
-                  <label for="discount">Precio en Promoción</label>   
-                  <input type="number" name="discount" id="discount" placeholder="$"> 
-               </div>
-
-               <div>
-                  <label for="category">Categoría</label>
-                  <select name="category" id="category">
-                     <option value="almacen">Almacén</option>
-                     <option value="verduleria">Frutas y Verduras</option>
-                     <option value="panaderia">Panaderia</option>
-                     <option value="carniceria">Carniceria</option>
-                  </select>
-               </div>
-
-               <div>
-                  <label for="stock">Stock</label>
-                  <input type="number" name="stock" id="stock">
-               </div>
-
-
-               <div>
-                  <label for="productDescription">Descripción</label>
-                  <textarea name="description" id="productDescription"cols="40" rows="10" placeholder= "Incorporá aquí una descripción del producto"></textarea>
-               </div>
-
-               
-              <div>
-                  <label for="productImage">Agregar imagen</label>
-                  <input type="file" name="imageProduct">
-               </div> 
-            
-               <div>
-                  <input type="submit" value="Agregar producto">
-               </div>
+            </form>
+            </div>
          </div>
-
-        </form>
-      </div>
-    </Main>
+    </main>
 
 
     <%- include('../partials/footer')%>
