@@ -518,11 +518,11 @@ i {
   color: var(--mostaza);
 }
 
-.products{
+.products {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center
+  align-items: center;
 }
 
 @media (min-width: 768px) {

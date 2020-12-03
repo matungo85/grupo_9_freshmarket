@@ -12,24 +12,24 @@
     <!---- comienzo del main --> 
     
     <main>
+    <div class="container">
+            <h1>Productos </h1>
 
-        <h1>Listado de Productos</h1>
+            <div class="products">
+                <% for (let product of products) { %>
 
-        <div class="products">
-            <% for (let product of products) { %>
-
-                <div class="product-box">
-    
-                    <img src="/images/<%= product.image %> " alt="" width="300px">
-                    <h4><%=product.name%> Marca <%=product.brand%></h4>
-                    <p>$ <%=product.price%></p>
-                    <p><%=product.category%></p>
-    
-                </div>
-           
-            <% } %>
-        </div>
+                    <div class="product-box">
         
+                        <img src="/images/<%= product.image %> " alt="" width="300px">
+                        <h4><%=product.name%> <%=product.brand%></h4>
+                        <p>$ <%=product.price%></p>
+                        <p><%=product.category%></p>
+        
+                    </div>
+            
+                <% } %>
+            </div>
+    </div>   
         
 
 

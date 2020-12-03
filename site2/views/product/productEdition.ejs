@@ -9,78 +9,81 @@
 
     <%- include('../partials/header') %>   
 
-    <Main>
-      <div class="form-to-create">
-      
-        <form id="productLoad" method="POST" action="/product/<%= product.id %>?_method=PUT"  enctype="multipart/form-data">
-         <div>
-               <h2>Editar un producto</h2>
-               <div>
-                  <label for="productName">Nombre</label>  
-                  <input type="text" name="productName" id="productName" value="<%= product.name %>"> 
-               </div>
-
-               <div>
-                  <label for="brand">Marca</label>
-                  <input type="text" name="brand" id="brand" value="<%= product.brand%>">
-               </div>
-
-               <div>
-                  <label for="volumen">Unidad de volúmen/peso</label>
-                  <input type="number" name="unidad" id="unidad" value="<%= product.format%>">
-                  <select name="volumen" id="volumen" value="<%= product.format2%>">
-                     <option value="kilo">kilo(s)</option>
-                     <option value="gramos">gramos</option>
-                     <option value="litro">litro(s)</option>
-                     <option value="mililitro">mililitros</option>
-                  </select>
-               </div>
-
-               <div>
-                  <label for="price">Precio Unitario</label>   
-                  <input type="number" name="price" id="price" value="<%= product.price%>"> 
-               </div>
-
-               <div>
-                  <label for="discount">Precio en Promoción</label>   
-                  <input type="number" name="discount" id="discount" value="<%= product.discount%>"> 
-               </div>
-
-               <div>
-                  <label for="category">Categoría</label>
-                  <select name="category" id="category" value="<%= product.category%>">
-                     <option value="almacen">Almacén</option>
-                     <option value="verduleria">Frutas y Verduras</option>
-                     <option value="panaderia">Panaderia</option>
-                     <option value="carniceria">Carniceria</option>
-                  </select>
-               </div>
-
-               <div>
-                  <label for="stock">Stock</label>
-                  <input type="number" name="stock" id="stock" value="<%= product.stock%>">
-               </div>
-
-
-               <div>
-                  <label for="productDescription">Descripción</label>
-                  <textarea name="description" id="productDescription"cols="40" rows="10" value="<%= product.description%>"></textarea>
-               </div>
-
-               
-              <div>
-                  <label for="productImage">Agregar imagen</label>
-                  <input type="file" name="imageProduct" >
-               </div> 
+    <main>
+       <div class="container">
+            <div class="form-to-create">
             
+            <form id="productLoad" method="POST" action="/product/<%= product.id %>?_method=PUT"  enctype="multipart/form-data">
                <div>
-                  <input type="submit" value="Agregar producto">
-               </div>
-         </div>
+                     <h2>Editar un producto</h2>
+                     <div>
+                        <label for="productName">Nombre</label>  
+                        <input type="text" name="productName" id="productName" value="<%= product.name %>"> 
+                     </div>
 
-        </form>
-      </div>
-    </Main>
+                     <div>
+                        <label for="brand">Marca</label>
+                        <input type="text" name="brand" id="brand" value="<%= product.brand%>">
+                     </div>
+
+                     <div>
+                        <label for="volumen">Unidad de volúmen/peso</label>
+                        <input type="number" name="unidad" id="unidad" value="<%= product.format%>">
+                        <select name="volumen" id="volumen" value="<%= product.format2%>">
+                           <option value="kilo">kilo(s)</option>
+                           <option value="gramos">gramos</option>
+                           <option value="litro">litro(s)</option>
+                           <option value="mililitro">mililitros</option>
+                        </select>
+                     </div>
+
+                     <div>
+                        <label for="price">Precio Unitario</label>   
+                        <input type="number" name="price" id="price" value="<%= product.price%>"> 
+                     </div>
+
+                     <div>
+                        <label for="discount">Precio en Promoción</label>   
+                        <input type="number" name="discount" id="discount" value="<%= product.discount%>"> 
+                     </div>
+
+                     <div>
+                        <label for="category">Categoría</label>
+                        <select name="category" id="category" value="<%= product.category%>">
+                           <option value="almacen">Almacén</option>
+                           <option value="verduleria">Frutas y Verduras</option>
+                           <option value="panaderia">Panaderia</option>
+                           <option value="carniceria">Carniceria</option>
+                        </select>
+                     </div>
+
+                     <div>
+                        <label for="stock">Stock</label>
+                        <input type="number" name="stock" id="stock" value="<%= product.stock%>">
+                     </div>
+
+
+                     <div>
+                        <label for="productDescription">Descripción</label>
+                        <textarea name="description" id="productDescription"cols="40" rows="10" value="<%= product.description%>"></textarea>
+                     </div>
+
+                     
+                  <div>
+                        <label for="productImage">Agregar imagen</label>
+                        <input type="file" name="imageProduct" >
+                     </div> 
+                  
+                     <div>
+                        <input type="submit" value="Agregar producto">
+                     </div>
+               </div>
+
+            </form>
+            </div>
+         </div>
+   
+    </main>
 
 
     <%- include('../partials/footer')%>
