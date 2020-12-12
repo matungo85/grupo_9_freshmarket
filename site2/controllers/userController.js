@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-const { Console } = require('console');
 
 
 
@@ -10,7 +9,7 @@ function getAllUsers () {
     const usersFilePath = path.join(__dirname, '..', 'data/users.json');
 
     const users = fs.readFileSync(usersFilePath, 'utf-8');
-    console.log(users)
+    
     if (users == '') {
         return []
     } else {
@@ -53,13 +52,13 @@ controller = {
 
     processRegister: function(req, res, next) {
         
-    
+        console.log(req.body.password)
         const newUser = {
             id: getNewId(),
             name: req.body.name,
             surname: req.body.surname,
             email: req.body.email,
-            password: req.body.password,
+            password: bcryptjs.hashSync(req.body.password, 10),
             category: 'user',
             image: req.files[0].filename,
             tel: req.body.tel,
@@ -67,10 +66,13 @@ controller = {
             sex: req.body.sex,
         }
 
-        const newUserList = getAllUsers().push(newUser);
-        
-        saveUsers(newUserList);
+        const userList = getAllUsers();
 
+        userList.push(newUser);
+        
+        saveUsers(userList);
+
+        res.redirect('/');
     },
 
 }
