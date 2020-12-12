@@ -17,6 +17,14 @@
                 <h3>Iniciar sesión</h3>
             </div>
             
+            <% if (typeof errors != 'undefined') { %>
+                <ul>
+                    <% for (error of errors) { %>
+                    <li> <%= error.msg  %> </li> 
+                    <% } %>  
+                </ul>
+            <% } else { %>
+
             <form action="" class='form-log'>
                 <div id='campo-mail'>
                     <label for="mail"> Ingresá tu email</label><br>
@@ -41,6 +49,7 @@
 
                 <div id='registro'><a href="/users/register">Registrate si no tenés cuenta</a></div>
             </form>
+            <% } %> 
             <div></div>
         </div>
     </main>
