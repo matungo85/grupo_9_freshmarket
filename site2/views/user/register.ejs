@@ -11,6 +11,14 @@
 
     <Main>
         
+      <% if (typeof errors != 'undefined') { %> 
+         <ul>
+            <% for (error of errors) { %>
+               <li><%= error.msg  %> </li> 
+            <% } %> 
+         </ul>
+      <% } %> 
+
       <form id="datos" action="/users/register" method="POST" enctype="multipart/form-data">
          
          <h2>Mis Datos</h2>

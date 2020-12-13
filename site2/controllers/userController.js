@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-
+const {check, validationResult, body} = require('express-validator');
 
 
 
@@ -52,28 +52,46 @@ controller = {
 
     processRegister: function(req, res, next) {
         
-        console.log(req.body.password)
-        const newUser = {
-            id: getNewId(),
-            name: req.body.name,
-            surname: req.body.surname,
-            email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            category: 'user',
-            image: req.files[0].filename,
-            tel: req.body.tel,
-            dni: req.body.dni,
-            sex: req.body.sex,
+        const errors = validationResult(req);
+        
+        if (errors.isEmpty()) {
+
+            const newUser = {
+                id: getNewId(),
+                name: req.body.name,
+                surname: req.body.surname,
+                email: req.body.email,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                category: 'user',
+                image: req.files[0].filename,
+                tel: req.body.tel,
+                dni: req.body.dni,
+                sex: req.body.sex,
+            }
+    
+            const userList = getAllUsers();
+    
+            userList.push(newUser);
+            
+            saveUsers(userList);
+    
+            res.redirect('/');
+
+        } else {
+            res.render('user/register', {errors: errors.errors})
         }
 
-        const userList = getAllUsers();
 
-        userList.push(newUser);
-        
-        saveUsers(userList);
-
-        res.redirect('/');
     },
+
+    processLogin: function (req,res) {
+        
+        const errors = validationResult(req);
+       
+        if (!errors.isEmpty()) {
+            res.render('user/login', {errors: errors.errors})
+        }
+    }
 
 }
 

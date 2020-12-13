@@ -610,5 +610,53 @@
   "tel": "4564123",
   "dni": "32123456",
   "sex": "masc"
+ },
+ {
+  "id": 52,
+  "name": "matias",
+  "surname": "mangano",
+  "email": "tsnooks0@instagram.com",
+  "password": "$2a$10$FtWAZUvfYFWUCRdON5tX/edfZ4VZKgOe.olCgCY51Hp4YejZFwB6e",
+  "category": "user",
+  "image": "imagen-1607827188799.png",
+  "tel": "",
+  "dni": "",
+  "sex": "fem"
+ },
+ {
+  "id": 53,
+  "name": "mati",
+  "surname": "mangano",
+  "email": "jnjng@g.com",
+  "password": "$2a$10$Nxe46wwra78O0S1yQg/Ineet/fOgJXCxvlTDACGz3sHa4OHJLl7d2",
+  "category": "user",
+  "image": "imagen-1607827394390.png",
+  "tel": "",
+  "dni": "",
+  "sex": "fem"
+ },
+ {
+  "id": 54,
+  "name": "matias",
+  "surname": "mangano",
+  "email": "mati@mati.com.ar",
+  "password": "$2a$10$.AhM2Qgbse5Ck5fDpxEU4ehcSgQ2O2UUBs.xaSFYFh8M/MyolEsvW",
+  "category": "user",
+  "image": "imagen-1607829707425.png",
+  "tel": "12312312",
+  "dni": "31654987",
+  "sex": "masc"
+ },
+ {
+  "id": 55,
+  "name": "Juan",
+  "surname": "perez",
+  "email": "juan@mail.com",
+  "password": "$2a$10$XW9bS44Ea.9ZqpWLZtWpLuDapHjrd5N60aiW6jXJMoSsOWpNu0L5K",
+  "category": "user",
+  "image": "imagen-1607831215956.png",
+  "tel": "12312345",
+  "dni": "32321654",
+  "sex": "masc"
  }
 ]

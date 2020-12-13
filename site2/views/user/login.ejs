@@ -23,9 +23,9 @@
                     <li> <%= error.msg  %> </li> 
                     <% } %>  
                 </ul>
-            <% } else { %>
+            <% } %>
 
-            <form action="" class='form-log'>
+            <form action="/users/login" method="POST" class='form-log'>
                 <div id='campo-mail'>
                     <label for="mail"> Ingresá tu email</label><br>
                     <input type="email" name='mail' id="mail">
@@ -49,7 +49,7 @@
 
                 <div id='registro'><a href="/users/register">Registrate si no tenés cuenta</a></div>
             </form>
-            <% } %> 
+            
             <div></div>
         </div>
     </main>
