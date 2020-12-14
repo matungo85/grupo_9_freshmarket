@@ -25,4 +25,6 @@ router.get('/login', userController.login);
 
 router.post('/login', validator.login, userController.processLogin);
 
+router.get('/logout', userController.logout)
+
 module.exports = router;

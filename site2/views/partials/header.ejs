@@ -15,8 +15,12 @@
         
         <div id=cuenta>
             <i class="fas fa-user"></i>
-            <a href='/users/login' id='botonCuenta'>Mi Cuenta</a>
-
+            
+            <% if (user) {%> 
+                <a href='/users/logout' id='botonCuenta'>Log Out</a>
+            <% } else { %>
+                <a href='/users/login' id='botonCuenta'>Mi Cuenta</a>
+            <% } %> 
         </div>
         
         <div id="carrito">
@@ -32,6 +36,16 @@
             <li><a href="/product/list/panaderia">PANADERIA</a></li>
             <li><a href="/product/list/carniceria">CARNICERIA</a></li>
         </ul>
+    
+        <div>
+            <% if (!user) { %> 
+                <p class="logUser">Usuario Logueado: No hay Usuario</p>
+                <% } else { %> 
+                <p class="logUser">Usuario Logueado: <%= user.email  %> </p>
+            <% } %>
+        </div>
+             
+
     </nav>
    
 </header>

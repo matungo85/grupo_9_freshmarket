@@ -90,7 +90,28 @@ controller = {
        
         if (!errors.isEmpty()) {
             res.render('user/login', {errors: errors.errors})
+        } else {
+
+            const users = getAllUsers();
+            const user = users.find(user => user.email == req.body.mail);
+            req.session.user = user;
+
+            if (req.body.rec) {
+                console.log('llegue aca')
+                res.cookie('user', user.email, {maxAge: 1000 * 60 * 60})
+                
+            }
+
+            res.redirect('/')
         }
+    },
+    logout: function (req, res) {
+        req.session.destroy();
+        if (req.cookies.user){
+            res.cookie('user', null, {maxAge: -1})
+        }   
+
+        res.redirect('/');
     }
 
 }

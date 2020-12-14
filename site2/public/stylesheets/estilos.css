@@ -101,6 +101,10 @@ i {
   color: var(--mostaza);
 }
 
+.logUser{
+  color: white
+}
+
 /*-------------------Fin del Header-----------------------*/
 
 body {

@@ -658,5 +658,29 @@
   "tel": "12312345",
   "dni": "32321654",
   "sex": "masc"
+ },
+ {
+  "id": 56,
+  "name": "Juan",
+  "surname": "Gomez",
+  "email": "juan@hotmail.com",
+  "password": "$2a$10$g5OTlz5FbqYaF7OR6KETuuO3MJ3EpaFZF2k4sgB9b9DcfN6iGRD5W",
+  "category": "user",
+  "image": "imagen-1607908277942.png",
+  "tel": "456456",
+  "dni": "35014126",
+  "sex": "masc"
+ },
+ {
+  "id": 57,
+  "name": "juana",
+  "surname": "gomez",
+  "email": "juana@gmail.com",
+  "password": "$2a$10$GBHHi0bphSolFgpN1mWVvO1eAlo1fDHtNY7Pmq9BS83jDCrYz/C9y",
+  "category": "user",
+  "image": "imagen-1607911489522.png",
+  "tel": "4564556",
+  "dni": "31743788",
+  "sex": "fem"
  }
 ]
