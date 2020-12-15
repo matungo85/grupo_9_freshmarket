@@ -42,9 +42,6 @@ controller = {
         res.render('user/login');
     },
 
-    processLogin: function(req, res, next) {
-        
-    },
 
     register: function(req, res) {
         res.render('user/register');
@@ -97,7 +94,7 @@ controller = {
             req.session.user = user;
 
             if (req.body.rec) {
-                console.log('llegue aca')
+                
                 res.cookie('user', user.email, {maxAge: 1000 * 60 * 60})
                 
             }
