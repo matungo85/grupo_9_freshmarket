@@ -1,18 +1,5 @@
 [
  {
-  "id": 2,
-  "name": "Aceite",
-  "brand": "Natura",
-  "format": "500",
-  "format2": "kilo",
-  "price": "300",
-  "discount": "250",
-  "category": "almacen",
-  "stock": "10",
-  "description": "descripcion genérica",
-  "image": "imageProduct-1606101492214.jpg"
- },
- {
   "id": 3,
   "name": "Yerba",
   "brand": "Cruz de malta",

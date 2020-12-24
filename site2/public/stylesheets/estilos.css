@@ -101,8 +101,8 @@ i {
   color: var(--mostaza);
 }
 
-.logUser{
-  color: white
+.logUser {
+  color: white;
 }
 
 /*-------------------Fin del Header-----------------------*/
@@ -325,6 +325,20 @@ article img {
   width: 200px;
 }
 
+button {
+  padding: 15px;
+  margin: 10px;
+  background-color: #3e978b;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 200px;
+}
+
 button:hover {
   background-color: aqua;
 }
@@ -343,18 +357,27 @@ th {
 
 article {
   padding: 50px;
-  display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
 }
+.imagen-detail {
+  text-align: center;
+  margin: 5%;
+}
 
+.cantidad-btns {
+  text-align: center;
+  margin: 2%;
+}
 .imagen {
   margin: 20px;
+  display: inline-block;
 }
 
 .informacion {
   margin: 20px;
+  display: inline-block;
 }
 
 section h4 {
@@ -367,6 +390,8 @@ section p {
 
 #seccion-principal {
   margin-top: 10%;
+  display: inline-block;
+  text-align: center;
 }
 
 /*-------------------fin del main-----------------------*/
@@ -406,6 +431,9 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+}
+.btn {
+  margin-top: 1%;
 }
 /*----------------------Comienzo de register---------------------*/
 #datos {
@@ -720,6 +748,6 @@ input[type="submit"]:hover {
 
 @media (min-width: 1150px) {
   main {
-    padding-top: 200px;
+    padding-top: 250px;
   }
 }

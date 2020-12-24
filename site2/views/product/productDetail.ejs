@@ -14,26 +14,31 @@
     <!---- comienzo del main --> 
     <main>
         <div class="container">
-            <section id="seccion-principal">
-                <article>
-                    <div class="imagen">
-                        <img src="/images/<%= producto.image%>" alt="tomate" width="200px">
-                    </div>
-                    <div class="informacion">
-                        <h4 class="name"><%= producto.name%> - Marca <%= producto.brand%></h4>
-                        <p class="description"><%= producto.description%></p>
-                        <p class="codigo"><%= producto.id%></p>
-                        <br>
-                        <p class="precio"> $ <%= producto.price%> - <%= producto.format%> <%= producto.format2%></p>
-                        <p> <%= producto.discount%> % </p>
-                        <br>
-                        <input id="btn-agregar" type="number">
-                        <button type="button">Agregar</button>
-                        <form action="/product/<%= producto.id%>?_method=DELETE" method="POST">
-                            <button type="submit">Borrar</button> 
-                        </form>
-                    </div>
-                </article> 
+            <section>
+                <div class="imagen-detail">
+                    <img src="/images/<%= producto.image%>" alt="foto-producto" width="400">
+                </div>
+                <div>
+                    <h4 class="name"><%= producto.name%> - Marca <%= producto.brand%></h4>
+                    <p class="description"><%= producto.description%></p>
+                    <p class="codigo"><%= producto.id%></p>
+                    <p class="precio"> $ <%= producto.price%> - <%= producto.format%> <%= producto.format2%></p>
+                    <p> <%= producto.discount%> % </p>
+                    <br>
+                    
+                </div>
+                <div class="cantidad-btns">
+                    <input id="btn-agregar" type="number">
+                <div>
+                    <button type="button">Agregar</button>
+                    <form action="/product/<%= producto.id%>?_method=DELETE" method="POST">
+                        <button class="btn" type="submit">Borrar</button> 
+                    </form>
+                    <form action="/product/id/edit<%= producto.id%>?_method=POST" method="POST">
+                        <button class="btn" type="submit">Editar</button> 
+                    </form>
+                </div> 
+                </div>       
             </section>
             <section>
                 <h4>Descripción y especificaciones</h4>
