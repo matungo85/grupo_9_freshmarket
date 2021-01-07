@@ -3,6 +3,8 @@ var router = express.Router();
 const multer = require('multer')
 const path = require('path')
 var productController = require('../controllers/productController')
+const db = require('../database/models')
+
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -30,5 +32,12 @@ router.get('/:id/edit', productController.edit);
 router.put('/:id', upload.any(), productController.processEdit);
 
 router.delete('/:id', productController.delete);
+
+router.get('/prueba', function (req, res) {
+  
+  const productos = db.Product.findAll();
+  console.log(productos);
+
+});
 
 module.exports = router;
