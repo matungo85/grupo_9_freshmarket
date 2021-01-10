@@ -27,9 +27,9 @@
                      </div>
 
                      <div>
-                        <label for="volumen">Unidad de volúmen/peso</label>
-                        <input type="number" name="unidad" id="unidad" value="<%= product.format%>">
-                        <select name="volumen" id="volumen" value="<%= product.format2%>">
+                        <label for="volumen">Volúmen/peso</label>
+                        <input type="number" name="unidad" id="unidad" value="<%= product.weight_volume%>">
+                        <select name="volumen" id="volumen" value="<%= product.unit%>">
                            <option value="kilo">kilo(s)</option>
                            <option value="gramos">gramos</option>
                            <option value="litro">litro(s)</option>
@@ -49,17 +49,15 @@
 
                      <div>
                         <label for="category">Categoría</label>
-                        <select name="category" id="category" value="<%= product.category%>">
-                           <option value="almacen">Almacén</option>
-                           <option value="verduleria">Frutas y Verduras</option>
-                           <option value="panaderia">Panaderia</option>
-                           <option value="carniceria">Carniceria</option>
+                        <select name="category" id="category">
+                           <% for (category of categories) { %>
+                              <% if (category.id == product.category_id) {%>
+                                 <option value="<%= category.id  %>" selected><%= category.name %> </option>
+                              <% } else %> 
+                                 <option value="<%= category.id  %>"><%= category.name %> </option>
+                              <% } %> 
+                           <% } %> 
                         </select>
-                     </div>
-
-                     <div>
-                        <label for="stock">Stock</label>
-                        <input type="number" name="stock" id="stock" value="<%= product.stock%>">
                      </div>
 
 
