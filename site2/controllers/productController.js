@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const db = require('../database/models')
 var controller = {};
 
 function getAllProducts() {
@@ -79,27 +80,20 @@ controller = {
         res.render ('product/productCreate');
     },
 
-    store: function(req, res, next) {
+    store: async function(req, res, next) {
 
-        let productos = getAllProducts();
-
-        let productId = productos.length == 0 ? 1 : productos[productos.length - 1].id + 1
-
-        let newProduct = {
-            id: productId,
+        await db.Product.create({
             name: req.body.productName,
             brand: req.body.brand,
-            format: req.body.unidad,
-            format2: req.body.volumen,
+            weight_volume: req.body.volumen,
+            unit: req.body.unidad,
             price: req.body.price,
             discount: req.body.discount,
-            category: req.body.category,
-            stock: req.body.stock,
+            category_id: req.body.category,
             description: req.body.description,
             image: req.files[0].filename,
-        }       
-        
-        saveProduct(newProduct)
+        })
+
 
         res.redirect('/');
     },
