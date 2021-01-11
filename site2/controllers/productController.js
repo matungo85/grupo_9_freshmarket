@@ -74,9 +74,8 @@ controller = {
     
     load: async function(req, res) {
 
-        console.log("llegue")
         const categories = await db.Category.findAll()
-        console.log("llegue aca tambien")
+        console.log('llegue aca')
         res.render ('product/productCreate', {categories: categories});
     },
 
