@@ -122,13 +122,6 @@ Mantener una actitud colaborativa entre los integrantes del equipo generando un 
 Mantener una comunicación fluida entre los integrantes del equipo de trabajo. 
 Mantener reuniones de trabajo periódicas con el propósito de conocer en qué instancia del trabajo nos encontramos, tomar decisiones, así como también plantear dudas e inquietudes que pueden resolverse grupalmente.
 
-
-
-4. Hacer menos (Less Of)
-    
-Posponer la resolución de algunas tareas que pueden poner en riesgo el cumplimiento de los plazos de entrega establecidos.
-
-
 5. Dejar de hacer (Stop Doing)
 
 Espaciar la comunicación del equipo.
