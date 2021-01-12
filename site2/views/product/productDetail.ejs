@@ -34,7 +34,7 @@
                     <form action="/product/<%= producto.id%>?_method=DELETE" method="POST">
                         <button class="btn" type="submit">Borrar</button> 
                     </form>
-                    <form action="/product/id/edit/<%= producto.id%>?_method=POST" method="POST">
+                    <form action="/product/<%= producto.id%>/edit" method="GET">
                         <button class="btn" type="submit">Editar</button> 
                     </form>
                 </div> 

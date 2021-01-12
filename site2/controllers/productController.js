@@ -49,8 +49,10 @@ controller = {
          let category = req.params.category; 
  
          const products = await db.Product.findAll({
-             where: {category_id: category}, include: [category]
+             where: {category_id: category}, include: ["category"]
             })
+
+      
          
          res.render('product/productList', {
              products: products 
@@ -58,7 +60,8 @@ controller = {
  
         }
         else {
-            const products = await db.Product.findAll();
+       
+            const products = await db.Product.findAll({include: ["category"]});
 
             res.render('product/productList', {products: products});
         }
@@ -67,7 +70,7 @@ controller = {
     detail: async function (req, res){
         const id = req.params.id;
 
-        const producto = await db.Product.findByPk(id, {include: [category]});
+        const producto = await db.Product.findByPk(id, {include: ["category"]});
 
         res.render('product/productDetail', {producto: producto});
     },
@@ -80,6 +83,7 @@ controller = {
     },
 
     store: async function(req, res, next) {
+        return res.send(req.body)
 
         await db.Product.create({
             name: req.body.productName,
@@ -133,7 +137,7 @@ controller = {
     delete: async function(req, res) {
         
         const id = req.params.id;
-
+        console.log('llegue acá')
         await db.Product.destroy({
             where: {
                 id: req.params.id

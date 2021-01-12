@@ -53,7 +53,7 @@
                            <% for (category of categories) { %>
                               <% if (category.id == product.category_id) {%>
                                  <option value="<%= category.id  %>" selected><%= category.name %> </option>
-                              <% } else %> 
+                              <% } else {%> 
                                  <option value="<%= category.id  %>"><%= category.name %> </option>
                               <% } %> 
                            <% } %> 
