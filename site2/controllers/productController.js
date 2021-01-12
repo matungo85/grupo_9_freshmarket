@@ -17,26 +17,6 @@ function getAllProducts() {
 
 }
 
-function saveProduct(product) {
-
-    let productos = getAllProducts();
-
-    productos.push(product);
-
-    const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-
-
-}
-
-function saveProducts(products) {
-    
-    const productsFilePath = path.join(__dirname, '..', 'data/productos.json');
-
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
-
-}
 
 controller = {
     cart: function(req, res) {
@@ -83,7 +63,7 @@ controller = {
     },
 
     store: async function(req, res, next) {
-        return res.send(req.body)
+        
 
         await db.Product.create({
             name: req.body.productName,
