@@ -97,3 +97,39 @@ Posponer la resolución de algunas tareas que pueden poner en riesgo el cumplimi
 
 Espaciar la comunicación del equipo.
 
+
+--------------------------------------------------------------------------------
+
+Retrospectiva (a entregar en sprint 6)
+
+1. Comenzar a hacer (Start Doing)
+
+No faltar a las weekly standups ya que la retroalimentación es fundamental para el funcionamiento del equipo.
+Pulir las vistas para que sean mas atractivas al usuario.
+Repartir las tareas al inicio de la iteración para que cada componente del equipo se encargue de una tarea específica.
+
+
+2. Hacer más (More Of)
+
+Sería interesante hacer mas de un encuentro semanal para discutir los avances del proyecto (y hacer las reuniones mas cortas para que no se hagan tan pesadas)
+Realizar una distribución equitativa de tareas en el siguiente sprint. 
+Realizar consultas a los docentes acerca de las inquietudes que surgen.
+
+3. Continuar haciendo (Keep Doing)
+
+Realizar consultas al grupo para el fortalecimiento de soluciones compartidas. 
+Mantener una actitud colaborativa entre los integrantes del equipo generando un espacio en el cual pueden plantearse dudas, propuestas y opiniones con el propósito de alcanzar los objetivos.
+Mantener una comunicación fluida entre los integrantes del equipo de trabajo. 
+Mantener reuniones de trabajo periódicas con el propósito de conocer en qué instancia del trabajo nos encontramos, tomar decisiones, así como también plantear dudas e inquietudes que pueden resolverse grupalmente.
+
+
+
+4. Hacer menos (Less Of)
+    
+Posponer la resolución de algunas tareas que pueden poner en riesgo el cumplimiento de los plazos de entrega establecidos.
+
+
+5. Dejar de hacer (Stop Doing)
+
+Espaciar la comunicación del equipo.
+
