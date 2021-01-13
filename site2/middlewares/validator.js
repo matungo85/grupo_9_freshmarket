@@ -37,9 +37,8 @@ module.exports = {
                 async (value, {req}) => {
                   
                     const user = await db.User.findOne({where: {email: value}})
-                    console.log(user)
                     
-                    if (user == null) {
+                    if (!user) {
                         return false
                     } else {
                         return bcryptjs.compareSync(req.body.pass, user.password)

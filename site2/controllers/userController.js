@@ -78,7 +78,7 @@ controller = {
     processLogin: async function (req,res) {
         
         const errors = validationResult(req);
-       
+        console.log(errors)
         if (!errors.isEmpty()) {
             res.render('user/login', {errors: errors.errors})
         } else {
