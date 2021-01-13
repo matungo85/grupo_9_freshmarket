@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             type: DataTypes.STRING
         },
-        last_name: {
+        lastname: {
             type: DataTypes.STRING
         },
         email: {
@@ -35,6 +35,14 @@ module.exports = (sequelize, DataTypes) => {
         rol: {
             type: DataTypes.INTEGER
         },
+        createdAt: {
+            type: DataTypes.DATE,
+            field: 'created_at'
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            field: 'updated_at'
+        }
     }
 
     const config = {
