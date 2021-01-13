@@ -33,17 +33,14 @@ module.exports = {
     login: [
         body('mail').isEmail().withMessage('el campo debe ser un email').bail()
             .notEmpty().withMessage('el campo Email es obligatorio').bail()
-            .custom(
-                async (value, {req}) => {
-                  
-                    const user = await db.User.findOne({where: {email: value}})
-                    
-                    if (!user) {
-                        return false
-                    } else {
-                        return bcryptjs.compareSync(req.body.pass, user.password)
+            .custom((value, {req}) => {
+
+                return db.User.findOne({where: {email: value}}).then(user => {
+                    if (!user || !bcryptjs.compareSync(req.body.pass, user.password)) {
+                        return Promise.reject()
                     }
+                  })
                 }
-            ).withMessage('credenciales inválidas')
+            ).withMessage('Credenciales Invalidas') 
     ]
 }
