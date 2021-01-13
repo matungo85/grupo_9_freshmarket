@@ -32,6 +32,14 @@ module.exports = (sequelize, DataTypes) => {
         },
         category_id: {
             type: DataTypes.INTEGER
+        },
+        createdAt: {
+            type: DataTypes.DATE,
+            field: 'created_at'
+        },
+        updatedAt: {
+            type: DataTypes.DATE,
+            field: 'updated_at'
         }
     }
     const config = {

@@ -27,8 +27,8 @@
 
                      <div>
                         <label for="volumen">Unidad de volúmen/peso</label>
-                        <input type="number" name="unidad" id="unidad" placeholder="500">
-                        <select name="volumen" id="volumen">
+                        <input type="number" name="volumen" id="volumen" placeholder="500">
+                        <select name="unidad" id="unidad">
                            <option value="kilo">kilo(s)</option>
                            <option value="gramos">gramos</option>
                            <option value="litro">litro(s)</option>
@@ -49,16 +49,10 @@
                      <div>
                         <label for="category">Categoría</label>
                         <select name="category" id="category">
-                           <option value="almacen">Almacén</option>
-                           <option value="verduleria">Frutas y Verduras</option>
-                           <option value="panaderia">Panaderia</option>
-                           <option value="carniceria">Carniceria</option>
+                           <% for (let category of categories) { %>
+                              <option value='<%= category.id  %>'><%= category.name  %> </option>
+                           <% } %> 
                         </select>
-                     </div>
-
-                     <div>
-                        <label for="stock">Stock</label>
-                        <input type="number" name="stock" id="stock">
                      </div>
 
 

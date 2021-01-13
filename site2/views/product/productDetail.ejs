@@ -22,7 +22,7 @@
                     <h4 class="name"><%= producto.name%> - Marca <%= producto.brand%></h4>
                     <p class="description"><%= producto.description%></p>
                     <p class="codigo"><%= producto.id%></p>
-                    <p class="precio"> $ <%= producto.price%> - <%= producto.format%> <%= producto.format2%></p>
+                    <p class="precio"> $ <%= producto.price%> - <%= producto.weight_volume%> <%= producto.unit%></p>
                     <p> <%= producto.discount%> % </p>
                     <br>
                     
@@ -34,7 +34,7 @@
                     <form action="/product/<%= producto.id%>?_method=DELETE" method="POST">
                         <button class="btn" type="submit">Borrar</button> 
                     </form>
-                    <form action="/product/id/edit<%= producto.id%>?_method=POST" method="POST">
+                    <form action="/product/<%= producto.id%>/edit" method="GET">
                         <button class="btn" type="submit">Editar</button> 
                     </form>
                 </div> 

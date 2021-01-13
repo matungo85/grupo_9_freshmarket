@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
 const {check, validationResult, body} = require('express-validator');
-
+const db = require('../database/models')
 
 
 function getAllUsers () {
@@ -38,39 +38,28 @@ function saveUsers (users) {
 
 var controller = {};
 controller = {
-    login: function(req, res) {
-        res.render('user/login');
-    },
-
 
     register: function(req, res) {
         res.render('user/register');
     },
 
-    processRegister: function(req, res, next) {
+    processRegister: async function(req, res, next) {
         
         const errors = validationResult(req);
         
         if (errors.isEmpty()) {
 
-            const newUser = {
-                id: getNewId(),
+            await db.User.create({
                 name: req.body.name,
-                surname: req.body.surname,
+                lastname: req.body.lastname,
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 10),
-                category: 'user',
-                image: req.files[0].filename,
-                tel: req.body.tel,
-                dni: req.body.dni,
-                sex: req.body.sex,
-            }
-    
-            const userList = getAllUsers();
-    
-            userList.push(newUser);
-            
-            saveUsers(userList);
+                avatar: req.files[0].filename,
+                phone: req.body.phone,
+                dni: req.body.dni,   
+                gender: req.body.gender,
+                rol: "user"
+            })
     
             res.redirect('/');
 
@@ -81,16 +70,21 @@ controller = {
 
     },
 
-    processLogin: function (req,res) {
+    login: function(req, res) {
+        res.render('user/login');
+    },
+    
+
+    processLogin: async function (req,res) {
         
         const errors = validationResult(req);
-       
+        console.log(errors)
         if (!errors.isEmpty()) {
             res.render('user/login', {errors: errors.errors})
         } else {
 
-            const users = getAllUsers();
-            const user = users.find(user => user.email == req.body.mail);
+            const user = await db.User.findOne({where: {email: req.body.mail}})
+
             req.session.user = user;
 
             if (req.body.rec) {

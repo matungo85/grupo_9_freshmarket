@@ -21,9 +21,9 @@
                     <div class="product-box">
         
                         <img src="/images/<%= product.image %> " alt="" width="300px">
-                        <h4><%=product.name%> <%=product.brand%></h4>
+                        <h4><a href="/product/<%= product.id %>/detail"><%=product.name%> <%=product.brand%></a></h4>
                         <p>$ <%=product.price%></p>
-                        <p><%=product.category%></p>
+                        <p><%=product.category.name%></p>
         
                     </div>
             
