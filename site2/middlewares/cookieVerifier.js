@@ -1,12 +1,13 @@
-const path = require('path');
-const fs = require('fs');
+const db = require('../database/models')
 
-
-module.exports = (req, res, next) => {
+module.exports = async (req, res, next) => {
     
     if (req.cookies.user && !req.session.user) {
-        const users = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data/users.json'), 'utf-8'));
-        const user = users.find(user => user.email == req.cookies.user);
+
+        const user = await db.User.findOne({
+            where: {email: req.cookies.user}
+           })
+
         req.session.user = user;
     }
 
