@@ -2,6 +2,7 @@ const fs = require('fs')
 const path = require('path')
 const db = require('../database/models')
 var controller = {};
+const {check, validationResult, body} = require('express-validator');
 
 function getAllProducts() {
     
@@ -58,26 +59,36 @@ controller = {
     load: async function(req, res) {
 
         const categories = await db.Category.findAll()
-        console.log('llegue aca')
         res.render ('product/productCreate', {categories: categories});
+        
     },
 
     store: async function(req, res, next) {
         
+        const errors = validationResult(req);
+        
+        if (errors.isEmpty()) {
+            await db.Product.create({
+                name: req.body.productName,
+                brand: req.body.brand,
+                weight_volume: req.body.volumen,
+                unit: req.body.unidad,
+                price: req.body.price,
+                discount: req.body.discount,
+                category_id: req.body.category,
+                description: req.body.description,
+                image: req.files[0].filename
+            })
+    
+            res.redirect('/');
+            
+        } else {
+            const categories = await db.Category.findAll()
+            res.render('product/productCreate', {errors: errors.errors, categories: categories})
+        }
 
-        await db.Product.create({
-            name: req.body.productName,
-            brand: req.body.brand,
-            weight_volume: req.body.volumen,
-            unit: req.body.unidad,
-            price: req.body.price,
-            discount: req.body.discount,
-            category_id: req.body.category,
-            description: req.body.description,
-            image: req.files[0].filename,
-        })
 
-        res.redirect('/');
+        
     },
 
     edit: async function(req, res){
@@ -87,8 +98,6 @@ controller = {
         const producto = await db.Product.findByPk(id);
         const categorias = await db.Category.findAll();
 
-
-
         res.render('product/productEdition', {product: producto, categories: categorias});
     },
 
@@ -96,21 +105,29 @@ controller = {
 
         const id = req.params.id;
  
+        const errors = validationResult(req);
 
-        await db.Product.update({
-            name: req.body.productName,
-            brand: req.body.brand,
-            weight_volume: req.body.volumen,
-            unit: req.body.unidad,
-            price: req.body.price,
-            discount: req.body.discount,
-            category_id: req.body.category,
-            description: req.body.description,
-            image: req.files[0].filename,
-        }, {where: {id: req.params.id}})
+        if(errors.isEmpty()) {
+            await db.Product.update({
+                name: req.body.productName,
+                brand: req.body.brand,
+                weight_volume: req.body.volumen,
+                unit: req.body.unidad,
+                price: req.body.price,
+                discount: req.body.discount,
+                category_id: req.body.category,
+                description: req.body.description,
+                image: req.files[0].filename,
+            }, {where: {id: req.params.id}})
+            res.redirect('/');
+        
+        } else {
+            const producto = await db.Product.findByPk(id);
+            const categorias = await db.Category.findAll();
 
-
-        res.redirect('/');
+            res.render('product/productEdition', {errors: errors.errors, product: producto, categories: categorias});
+            
+        }
 
     },
 
