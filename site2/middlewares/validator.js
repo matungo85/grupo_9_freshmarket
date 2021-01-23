@@ -12,18 +12,15 @@ module.exports = {
                 .isLength({min: 2}).withMessage('El apellido debe tener al menos dos caracteres'),
         body('email').notEmpty().withMessage('El campo email es Obligatorio').bail()
                 .isEmail().withMessage('El campo debe ser un email').bail()
-                .custom( async (value) => {
+                .custom((value) => {
 
-                    const user = await db.User.findOne({where: {email: value}})
+                    return db.User.findOne({where: {email: value}}).then((user) => {
+                        if (user) {
+                            return Promise.reject("el email esta registrado")
+                        }
+                    })
 
-                    if(user) {
-                        return false
-                    } else {
-                        return true
-                    }
-                }
-
-                ).withMessage('El email ya esta registrado').bail(),
+                }).bail(),
         body('phone').notEmpty().withMessage('El campo teléfono es Obligatorio').bail(),
         body('dni').notEmpty().withMessage('El campo dni es Obligatorio').bail(),
         body('avatar').custom((value, {req}) => req.files[0]).withMessage('La imagen es obligatoria').bail()
