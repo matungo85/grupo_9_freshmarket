@@ -10,9 +10,10 @@
     <%- include('../partials/header') %>   
 
       <Main>
-         <h1>Mis Datos</h1>
-      
+         <h1 id="regTitle">Mis Datos</h1>
          <div id='register'>
+            
+
             <% if (typeof errors != 'undefined') { %> 
                <ul>
                   <% for (error of errors) { %>
