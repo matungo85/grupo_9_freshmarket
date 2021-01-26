@@ -4,7 +4,7 @@ window.addEventListener ('load', () =>{
 
     let form = document.querySelector('.form-log')
     let name = document.querySelector('#regName')
-    let errorName = document.querySelector('#errorName')
+    //let errorName = document.querySelector('#errorName')
     let lastname = document.querySelector('#regLastname')
     let tel = document.querySelector('#regPhone')
     let dni = document.querySelector('#regDni')
@@ -27,9 +27,23 @@ window.addEventListener ('load', () =>{
             errorlastname.style.display = 'block'            
         }else{ 
             errorlastname.style.display = 'none'
+        }
+
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value)){
+            errorEmail.style.display = 'none'            
+        }else{ 
+            errorEmail.style.display = 'block'
+        };
+
+        if(password.value.length < 7){
+            errorpassword.style.display = 'block'            
+        }else{ 
+            errorpassword.style.display = 'none'
         };
 
         
+
+
         
         event.preventDefault();
  
