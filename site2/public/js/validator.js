@@ -18,11 +18,17 @@ window.addEventListener ('load', () =>{
     button.addEventListener('click', function(event){
         
         if(name.value.length < 2){
-            errorName.innerHTML = 'El campo debe tener al menos dos caracteres.'            
-        }else{
-           
-            errorName.innerHTML=''
-        }
+            errorName.style.display = 'block'            
+        }else{ 
+            errorName.style.display = 'none'
+        };
+
+        if(lastname.value.length < 2){
+            errorlastname.style.display = 'block'            
+        }else{ 
+            errorlastname.style.display = 'none'
+        };
+
         
         
         event.preventDefault();

@@ -461,8 +461,10 @@ button {
 */
 .errors {
   color: red;
-  
+  display: none;
 }
+
+
 #regTitle{
   margin-top: auto;
   text-align: center;
