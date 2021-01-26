@@ -459,7 +459,7 @@ button {
   margin-right: 50px;
 }
 */
-#regErrors {
+.errors {
   color: red;
   
 }
