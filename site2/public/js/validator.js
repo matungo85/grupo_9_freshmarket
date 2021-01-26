@@ -12,7 +12,7 @@ window.addEventListener ('load', () =>{
     let email = document.querySelector('#regEmail')
     let avatar = document.querySelector('#regAvatar')
     let password = document.querySelector('#regPassword')
-
+    let errors = document.querySelectorAll('.errors')
     let button = document.querySelector('button')
 
     button.addEventListener('click', function(event){
@@ -41,22 +41,13 @@ window.addEventListener ('load', () =>{
             errorpassword.style.display = 'none'
         };
 
-        
+        for (let error of errors){
+            if(error.style.display == "block"){
+                event.preventDefault();
 
-
-        
-        event.preventDefault();
- 
-        
-
-
-         
+            }
+        }
     });
-
-
-
-
-
 
 })
 
