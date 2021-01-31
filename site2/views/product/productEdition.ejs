@@ -13,6 +13,14 @@
        <div class="container">
             <div class="form-to-create">
             
+               <% if (typeof errors != 'undefined') { %> 
+                  <ul>
+                     <% for (error of errors) { %>
+                        <li><%= error.msg  %> </li> 
+                     <% } %> 
+                  </ul>
+               <% } %> 
+
             <form id="productLoad" method="POST" action="/product/<%= product.id %>?_method=PUT"  enctype="multipart/form-data">
                <div>
                      <h2>Editar un producto</h2>
@@ -63,13 +71,22 @@
 
                      <div>
                         <label for="productDescription">Descripción</label>
+
+                        
+
                         <textarea name="description" id="productDescription"cols="40" rows="10" value=""><%= product.description%></textarea>
+
                      </div>
 
                      
                   <div>
-                        <label for="productImage">Agregar imagen</label>
-                        <input type="file" name="imageProduct" >
+                        <label for="productImage">Agregar Imagen</label>
+                        <div style="width: 300px">
+                           <img src="/images/<%= product.image%>" alt="" style="width: 100%">
+                        </div>
+                        
+                        <input type="file" name="imageProduct">
+
                      </div> 
                   
                      <div>

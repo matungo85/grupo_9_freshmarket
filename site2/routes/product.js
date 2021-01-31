@@ -4,6 +4,7 @@ const multer = require('multer')
 const path = require('path')
 var productController = require('../controllers/productController')
 const db = require('../database/models')
+const validator = require('../middlewares/validator')
 
 
 var storage = multer.diskStorage({
@@ -25,11 +26,11 @@ router.get('/:id/detail', productController.detail);
 
 router.get('/create', productController.load);
 
-router.post('/create', upload.any(), productController.store);
+router.post('/create', upload.any(), validator.product, productController.store);
 
 router.get('/:id/edit', productController.edit);
 
-router.put('/:id', upload.any(), productController.processEdit);
+router.put('/:id', upload.any(), validator.product, productController.processEdit);
 
 router.delete('/:id', productController.delete);
 

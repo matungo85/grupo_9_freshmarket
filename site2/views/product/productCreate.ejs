@@ -12,6 +12,15 @@
     <main>
        <div class="container">
             <div class="form-to-create">
+               
+               <% if (typeof errors != 'undefined') { %> 
+                  <ul>
+                     <% for (error of errors) { %>
+                        <li><%= error.msg  %> </li> 
+                     <% } %> 
+                  </ul>
+               <% } %> 
+
             <form id="productLoad" method="POST" action="/product/create"  enctype="multipart/form-data">
                <div>
                      <h2>Agregar un producto</h2>
