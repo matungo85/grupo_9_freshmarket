@@ -18,23 +18,16 @@
                 <h2>Productos Destacados</h2>
 
                     <div id='destacados'>
-                        <article>
-                            <img src="/images/frutas-verduras2.jpg" alt="" class="destacado">
-                            <h3>Producto 1</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                        </article>
 
-                        <article>
-                            <img src="/images/carne.webp" alt="" class="destacado">
-                            <h3>Producto 2</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </article>
+                        <% for (let i = 0; i<3 ; i++) { %> 
 
-                        <article>
-                            <img src="/images/carne2.jpg" alt="" class="destacado">
-                            <h3>Producto 3</h3>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        </article>
+                            <article>
+                                <img src="/images/<%=products[i].image%>" alt="" class="destacado">
+                                <h3><%=products[i].name%> - <%=products[i].brand%></h3>
+                                <p><%=products[i].description%></p>
+                            </article>
+
+                        <% } %> 
 
                     </div>
 
