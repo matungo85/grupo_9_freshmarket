@@ -22,6 +22,7 @@ CREATE TABLE users (
 CREATE TABLE products (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(255) NOT NULL,
+    brand VARCHAR (255) NOT NULL,
     price DECIMAL UNSIGNED NOT NULL,
     description TEXT,
     weight_volume VARCHAR(10),
