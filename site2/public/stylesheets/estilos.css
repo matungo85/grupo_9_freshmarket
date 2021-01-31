@@ -436,7 +436,7 @@ button {
   margin-top: 1%;
 }
 /*----------------------Comienzo de register---------------------*/
-#datos {
+/*#datos {
   display: flex;
   flex-direction: column;
 }
@@ -458,6 +458,57 @@ button {
   float: right;
   margin-right: 50px;
 }
+*/
+#regErrors {
+  color: red;
+  
+}
+#regTitle{
+  margin-top: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#register {
+  border: 3px solid var(--verde-2);
+  width: 350px;
+  height: auto;
+  margin: 20px auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  background-color: var(--verde-1);
+  border-radius: 10px;
+}
+
+#register h3 {
+  margin: 10px auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#reg-name,
+#reg-lastname,
+#reg-tel,
+#reg-dni,
+#reg-gender,
+#reg-email,
+#reg-avatar,
+#reg-pass,
+#reg-retype {
+  margin: 20px auto;
+}
+
+input #regPhone {
+  margin: 8px 0px;
+  padding: 12px 20px;
+}
+
+.form-log #submit {
+  margin: 10px;
+  border-radius: 6px;
+  border: 2px solid black;
+}
+
 
 /*------------------------Fin de register----------------------*/
 

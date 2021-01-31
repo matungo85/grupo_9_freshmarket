@@ -56,7 +56,7 @@ controller = {
                 password: bcryptjs.hashSync(req.body.password, 10),
                 avatar: req.files[0].filename,
                 phone: req.body.phone,
-                dni: req.body.dni,   
+                DNI: req.body.dni,   
                 gender: req.body.gender,
                 rol: "user"
             })
