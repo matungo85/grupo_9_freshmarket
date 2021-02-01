@@ -32,12 +32,14 @@
                
                <div id="reg-name">
                   <label for="name">Nombre</label>
-                  <input type="text" name="name" id="regName"> 
+                  <input type="text" name="name" id="regName">
+                  <p class="errors" id="errorName">El campo debe tener al menos dos caracteres.</p> 
                </div>
             
                <div id="reg-lastname">   
                   <label for="surname">Apellido</label> 
                   <input type="text" name="lastname" id="regLastname"> 
+                  <p class="errors" id="errorlastname">El campo debe tener al menos dos caracteres.</p> 
                </div>
                
 
@@ -62,7 +64,8 @@
 
                <div id="reg-email">
                   <label for="email">Correo Electrónico</label>
-                  <input type="email" name="email">
+                  <input type="email" name="email" id="regEmail">
+                  <p class="errors" id="errorEmail">El contenido no es una direccion de correo válida.</p> 
                </div>
 
                <div id='reg-avatar'>
@@ -75,6 +78,7 @@
                <div id="reg-pass">
                   <label for="password">Contraseña</label>
                   <input type="password" name="password" id="regPassword">
+                  <p class="errors" id="errorpassword">La contraseña debe tener al menos ocho caracteres.</p> 
                </div>
 
                <div id="reg-retype">
