@@ -2,8 +2,10 @@ const bcryptjs =require ('bcryptjs');
 const {User} = require ('../database/models')
 
 module.exports = {
-
-    
+login : (req, res ) => {
+    console.log ('llegué acá!!')
+}
+    /*
     async login (req, res) {
         const {email, password} = req.body
 
@@ -30,5 +32,5 @@ module.exports = {
          })
      }
         
-    }
+    } */
 };
