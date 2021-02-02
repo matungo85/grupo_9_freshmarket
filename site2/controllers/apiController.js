@@ -1,15 +1,11 @@
 const bcryptjs =require ('bcryptjs');
-const {User} = require ('../database/models')
+const db = require ('../database/models')
 
 module.exports = {
-login : (req, res ) => {
-    res.send ('Estoy en el controlador de la API')
-}
-    /*
     async login (req, res) {
         const {email, password} = req.body
 
-     const users = await User.findOne({
+     const users = await db.User.findOne({
         where: {
             email,
         }
@@ -32,5 +28,5 @@ login : (req, res ) => {
          })
      }
         
-    } */
+    } 
 };

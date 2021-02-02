@@ -6,7 +6,7 @@ router.get('/', function(req, res) {
     res.send ('Estoy en la ruta de la api')
 })
 
-router.get('/users/login', apiController.login);
+router.post('/users/login', apiController.login);
 
  
 
