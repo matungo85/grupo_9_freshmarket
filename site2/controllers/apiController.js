@@ -3,7 +3,7 @@ const {User} = require ('../database/models')
 
 module.exports = {
 login : (req, res ) => {
-    console.log ('llegué acá!!')
+    res.send ('Estoy en el controlador de la API')
 }
     /*
     async login (req, res) {
