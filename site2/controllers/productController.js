@@ -106,6 +106,7 @@ controller = {
         const id = req.params.id;
  
         const errors = validationResult(req);
+        const product = db.Product.findByPk(id);
 
         if(errors.isEmpty()) {
             await db.Product.update({
@@ -117,7 +118,7 @@ controller = {
                 discount: req.body.discount,
                 category_id: req.body.category,
                 description: req.body.description,
-                image: req.files[0].filename,
+                image: req.files[0] ? req.files[0].filename : product.image,
             }, {where: {id: req.params.id}})
             res.redirect('/');
         

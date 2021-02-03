@@ -54,28 +54,26 @@ module.exports = {
         body('brand').notEmpty().withMessage('El campo marca es obligatorio').bail()
             .isLength({min: 5}).withMessage('El campo marca debe tener un mínimo de 5 caracteres'),
         body('description').isLength({min: 20}).withMessage('El campo descripción debe tener al menos 20 caracteres'),
-        body('imageProduct').custom(async (value, {req}) => {
+        body('imageProduct').custom((value, {req}) => {
                 
         
                 if (req.method == 'PUT') {
-                    console.log("entre al method put")
-                    const product = await db.Product.findOne({where: { id: req.params.id}})
-                    console.log(product.image)
-                    console.log(req.files[0])
-                    if (!product.image && !req.files[0]) {
-                        console.log("entre al segundo if")
-                        return false
-                    } else {
-                        console.log("entre al segundo if por false")
-                        return true
-                    }
+                    return true
+                    
                 } 
+                    
+                return req.files[0]
+              
 
             }).withMessage('La imagen es obligatoria').bail()
-            .custom(async (value, {req}) => {
-                const auxi = ['.jpg', '.png', '.jpeg', '.gif'];
-                extention = path.extname(req.files[0].originalname)
-                return auxi.includes(extention)
+            .custom((value, {req}) => {
+                if (req.files[0]){
+                    const auxi = ['.jpg', '.png', '.jpeg', '.gif'];
+                    extention = path.extname(req.files[0].originalname)
+                    return auxi.includes(extention)
+                }
+                return true
+                
                 }).withMessage('extension invalida').bail()
     ]
 }
