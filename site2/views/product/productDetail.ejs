@@ -21,9 +21,9 @@
                 <div>
                     <h4 class="name"><%= producto.name%> - Marca <%= producto.brand%></h4>
                     <p class="description"><%= producto.description%></p>
-                    <p class="codigo"><%= producto.id%></p>
+                    <p class="codigo">Código: <%= producto.id%></p>
                     <p class="precio"> $ <%= producto.price%> - <%= producto.weight_volume%> <%= producto.unit%></p>
-                    <p> <%= producto.discount%> % </p>
+                    <p> En descuento: $ <%= producto.discount%> </p>
                     <br>
                     
                 </div>
@@ -40,10 +40,7 @@
                 </div> 
                 </div>       
             </section>
-            <section>
-                <h4>Descripción y especificaciones</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Temporibus et rerum voluptatum asperiores fuga, impedit voluptatibus.</p>
-            </section>
+
             <section>
                 <div id='info'>
                     <div>
