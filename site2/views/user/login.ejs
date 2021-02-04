@@ -25,19 +25,21 @@
                 </ul>
             <% } %>
 
-            <form action="/users/login" method="POST" class='form-log'>
+            <form action="/users/login" method="POST" class='form-log' id='formLogin'>
                 <div id='campo-mail'>
                     <label for="mail"> Ingresá tu email</label><br>
                     <input type="email" name='mail' id="mail">
+                    <p class="errors" id="errorLoginEmail">El contenido no es una direccion de correo válida.</p>
                 </div>
 
                 <div id='campo-pass'>
                     <label for="pass"> Ingresá tu contraseña</label><br>
                     <input type="password" name='pass' id="pass">
+                    <p class="errors" id="errorLoginPassword">La contraseña debe tener al menos ocho caracteres.</p> 
                 </div>  
 
                 <div>
-                    <input type="submit" value="Ingresar" id="ingreso">
+                    <button type="submit" value="Ingresar" id="ingreso">Ingresar </button>
                 </div>
 
                 <div id='nuevoPass'><a href="#">Olvidé mi contraseña</a></div>
