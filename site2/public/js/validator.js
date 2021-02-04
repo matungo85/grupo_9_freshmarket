@@ -2,7 +2,7 @@ window.addEventListener ('load', () =>{
 
     console.log('documento vinculado con exito')
 
-    let form = document.querySelector('.form-log')
+    let form = document.querySelector('#formLogin')
     let name = document.querySelector('#regName')
     //let errorName = document.querySelector('#errorName')
     let lastname = document.querySelector('#regLastname')
@@ -15,6 +15,11 @@ window.addEventListener ('load', () =>{
     let errors = document.querySelectorAll('.errors')
     let button = document.querySelector('button')
 
+    let loginMail = document.querySelector('#mail')
+    let loginPassword = document.querySelector('#pass')
+    let loginButton = document.querySelector('#ingreso')
+    console.log (form)
+   
     button.addEventListener('click', function(event){
         
         if(name.value.length < 2){
@@ -27,7 +32,7 @@ window.addEventListener ('load', () =>{
             errorlastname.style.display = 'block'            
         }else{ 
             errorlastname.style.display = 'none'
-        }
+        };
 
         if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email.value)){
             errorEmail.style.display = 'none'            
@@ -47,9 +52,31 @@ window.addEventListener ('load', () =>{
 
             }
         }
-    });
+    })
+
+    loginButton.addEventListener('click',function(e){
+        console.log(e)
+
+        if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(loginMail.value)){
+            errorLoginEmail.style.display = 'none'            
+        }else{ 
+            errorLoginEmail.style.display = 'block'
+        };
+
+        if(loginPassword.value.length < 7){
+            errorLoginPassword.style.display = 'block'            
+        }else{ 
+            errorLoginPassword.style.display = 'none'
+        };
+
+        for (let error of errors){
+            if(error.style.display == "block"){
+                e.preventDefault();
+            }
+        }
+
+    
+    })
+
 
 })
-
-
-
