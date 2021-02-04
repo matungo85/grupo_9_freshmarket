@@ -18,16 +18,17 @@
                 <h2>Productos Destacados</h2>
 
                     <div id='destacados'>
+                        <% if (typeof products != 'undefined') { %> 
+                            <% for (product of products) { %> 
 
-                        <% for (let i = 0; i<3 ; i++) { %> 
+                                <article>
+                                    <img src="/images/<%=product.image%>" alt="" class="destacado">
+                                    <h3><%=product.name%> - <%=product.brand%></h3>
+                                    <p><%=product.description%></p>
+                                </article>
 
-                            <article>
-                                <img src="/images/<%=products[i].image%>" alt="" class="destacado">
-                                <h3><%=products[i].name%> - <%=products[i].brand%></h3>
-                                <p><%=products[i].description%></p>
-                            </article>
-
-                        <% } %> 
+                            <% } %> 
+                        <% } %>
 
                     </div>
 
