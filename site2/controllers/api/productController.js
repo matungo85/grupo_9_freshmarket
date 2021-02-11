@@ -7,7 +7,7 @@ controller = {
     list: async (req, res) => {
 
         const products = await db.Product.findAll({include: ["category"], attributes: ["id", "name", "description"]});
-        /*, attributes: ["id", "name", "description"]*/
+        
         const categorias = await db.sequelize.query('select distinct categories.name, count(categories.name) as "productos en esta categoria" from products inner join categories on products.category_id = categories.id group by categories.name' )
 
        for (let i = 0; i < products.length; i++) {
@@ -24,7 +24,18 @@ controller = {
         }
 
         res.json(respuesta);
-    }
+    },
+    
+    detail: async function (req, res){
+        
+        const id = req.params.id;
+
+        const producto = await db.Product.findByPk(id, {include: ["category"]});
+
+        producto.setDataValue("url de la imagen", producto.image)
+
+        res.json(producto);
+    },
 }
 
 module.exports = controller
