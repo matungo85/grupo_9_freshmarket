@@ -26,9 +26,9 @@ controller = {
         
         const id = req.params.id;
 
-        const user = await db.User.findByPk(id, {attributes: ['id', 'name', 'lastname', 'email', 'phone', 'DNI', 'gender']});
+        const user = await db.User.findByPk(id, {attributes: ['id', 'name', 'lastname', 'email', 'phone', 'DNI', 'gender', 'avatar']});
 
-        user.setDataValue("url de la imagen", user.avatar)
+        user.setDataValue("url de la imagen", 'http://localhost:3000/images/users/' + user.avatar)
 
         res.json(user);
     },

@@ -32,7 +32,7 @@ controller = {
 
         const producto = await db.Product.findByPk(id, {include: ["category"]});
 
-        producto.setDataValue("url de la imagen", producto.image)
+        producto.setDataValue("url de la imagen", 'http://localhost:3000/images/' + producto.image)
 
         res.json(producto);
     },
