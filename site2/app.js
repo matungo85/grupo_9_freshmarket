@@ -38,8 +38,8 @@ app.use(locals)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product', productRouter);
-app.use('/api/users', apiUserRouter)
-app.use('/api/products', apiProductRouter)
+app.use('/api/users', apiUserRouter);
+app.use('/api/products', apiProductRouter);
 
 
 // catch 404 and forward to error handler
