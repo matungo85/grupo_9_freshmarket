@@ -11,6 +11,8 @@ var locals = require('./middlewares/setLocals')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/product');
+var apiUserRouter = require('./routes/api/users')
+var apiProductRouter = require('./routes/api/products')
 
 var app = express();
 
@@ -36,6 +38,8 @@ app.use(locals)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product', productRouter);
+app.use('/api/users', apiUserRouter);
+app.use('/api/products', apiProductRouter);
 
 
 // catch 404 and forward to error handler
