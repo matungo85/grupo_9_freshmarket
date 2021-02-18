@@ -58,7 +58,7 @@ controller = {
                 phone: req.body.phone,
                 DNI: req.body.dni,   
                 gender: req.body.gender,
-                rol: "user"
+                rol: 10
             })
     
             res.redirect('/');
