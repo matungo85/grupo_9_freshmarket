@@ -1,0 +1,9 @@
+<p><%=user.name%></p>
+<p><%=user.emial%></p>
+<p><%=user.avatar%></p>
+<p><%=user.phone%></p>
+<p><%=user.dni%></p>
+<p><%=user.gender%></p>
+
+<a href="/users/update/<%=user.id%>"><button>Editar</button></a>
+<a href="/users/delete/<%=user.id%>" method="POST"><button type="submit">Borrar</button></a>

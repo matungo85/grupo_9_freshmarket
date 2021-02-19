@@ -29,4 +29,12 @@ router.post('/login', validator.login, userController.processLogin);
 
 router.get('/logout', auth ,userController.logout)
 
+router.get('/:id', userController.detalle); 
+
+router.get('/update/:id', userController.update); 
+
+router.post('/update/:id', userController.update); 
+
+router.post('/detele/:id', userController.delete); 
+
 module.exports = router;

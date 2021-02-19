@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
 const {check, validationResult, body} = require('express-validator');
-const db = require('../database/models')
+const db = require('../database/models'); 
 
 
 function getAllUsers () {
@@ -103,7 +103,51 @@ controller = {
         }   
 
         res.redirect('/');
-    }
+    }, 
+    detalle: function(req, res){
+        db.User.findByPk(req.params.id, {
+            include: [{association: 'productos'}]
+        })
+            .then(function(user){
+                res.render('userDetail', {user:user}); 
+            }) 
+    }, 
+    update: function(req, res){
+        let userReq = db.User.findByPk(req.params.id) 
+        .then(function(user){
+            res.render('userUpdate', {user:user})
+        })
+    }, 
+    update: function(req, res){
+        db.User.update({
+            name: req.body.name,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            avatar: req.files[0].filename,
+            phone: req.body.phone,
+            DNI: req.body.dni,   
+            gender: req.body.gender,
+            rol: "user"
+        }, {
+            where: {
+                id: req.params.id
+            } 
+        }); 
+
+        res.redirect('users/' + req.params.id)
+
+    },
+    delete: function(req, res){ 
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.redirect('/home')
+
+    } 
 
 }
 

@@ -46,10 +46,18 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const config = {
-        tablename: "users"
+        tableName: "users", 
+        timestamps: false
     }
 
     const User = sequelize.define(alias, cols, config);
+
+    User.associate = function(models){
+        User.belongsToMany(models.Product, {
+            as: "productos", 
+            foreignKey: "user_id"
+        })
+    }
 
     return User
 
