@@ -104,7 +104,7 @@ controller = {
 
         res.redirect('/');
     }, 
-    detalle: function(req, res){
+    detail: function(req, res){
         db.User.findByPk(req.params.id, {
             include: [{association: 'productos'}]
         })
@@ -112,7 +112,7 @@ controller = {
                 res.render('userDetail', {user:user}); 
             }) 
     }, 
-    update: function(req, res){
+    userToUpdate: function(req, res){
         let userReq = db.User.findByPk(req.params.id) 
         .then(function(user){
             res.render('userUpdate', {user:user})
