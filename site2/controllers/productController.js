@@ -135,7 +135,6 @@ controller = {
     delete: async function(req, res) {
         
         const id = req.params.id;
-        console.log('llegue acá')
         await db.Product.destroy({
             where: {
                 id: req.params.id

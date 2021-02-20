@@ -29,12 +29,12 @@ router.post('/login', validator.login, userController.processLogin);
 
 router.get('/logout', auth ,userController.logout)
 
-router.get('/:id', userController.detail); 
+router.get('/detail/:id', userController.detail); 
 
 router.get('/update/:id', userController.userToUpdate); 
 
-router.post('/update/:id', userController.update); 
+router.put('/update/:id', userController.update); 
 
-router.post('/detele/:id', userController.delete); 
+router.delete('/delete/:id', userController.delete); 
 
 module.exports = router;

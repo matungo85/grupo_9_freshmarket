@@ -58,7 +58,7 @@ controller = {
                 phone: req.body.phone,
                 DNI: req.body.dni,   
                 gender: req.body.gender,
-                rol: "user"
+                rol: 10
             })
     
             res.redirect('/');
@@ -105,35 +105,38 @@ controller = {
         res.redirect('/');
     }, 
     detail: function(req, res){
-        db.User.findByPk(req.params.id, {
-            include: [{association: 'productos'}]
-        })
+        db.User.findByPk(req.params.id)
             .then(function(user){
-                res.render('userDetail', {user:user}); 
+                res.render('user/userDetail', {user:user}); 
             }) 
     }, 
     userToUpdate: function(req, res){
         let userReq = db.User.findByPk(req.params.id) 
         .then(function(user){
-            res.render('userUpdate', {user:user})
+            res.render('user/userUpdate', {user:user})
         })
     }, 
-    update: function(req, res){
-        db.User.update({
+    update: async function(req, res){
+
+        const id = req.params.id;
+        const user = await db.User.findByPk(id); 
+        
+
+        await db.User.update({
             name: req.body.name,
             lastname: req.body.lastname,
             email: req.body.email,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            avatar: req.files[0].filename,
+            avatar: req.files[0] ? req.files[0].filename : user.avatar,
             phone: req.body.phone,
-            DNI: req.body.dni,   
+            DNI: req.body.DNI,   
             gender: req.body.gender,
-            rol: "user"
+            rol: 10
         }, {
             where: {
                 id: req.params.id
             } 
         }); 
+        
 
         res.redirect('users/' + req.params.id)
 
@@ -145,7 +148,7 @@ controller = {
             }
         })
 
-        res.redirect('/home')
+        res.redirect('/')
 
     } 
 
