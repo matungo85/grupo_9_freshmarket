@@ -14,11 +14,14 @@ controller = {
        for (let i = 0; i < products.length; i++) {
            products[i].setDataValue("url", "http://localhost:3000/api/products/" + products[i].id)
         }
-               
+        const total = products.reduce((acum,product)=> {
+            acum+=product.price
+        })      
         let respuesta = {
             meta: {
                 count: products.length,
-                categorias: categorias[0]
+                categorias: categorias[0],
+                total: total
 
             },
             data: products
