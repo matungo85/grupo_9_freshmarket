@@ -138,7 +138,7 @@ controller = {
         }); 
         
 
-        res.redirect('users/' + req.params.id)
+        res.redirect('/users/detail/' + req.params.id)
 
     },
     delete: function(req, res){ 

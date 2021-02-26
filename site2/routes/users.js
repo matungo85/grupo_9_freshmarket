@@ -33,7 +33,7 @@ router.get('/detail/:id', userController.detail);
 
 router.get('/update/:id', userController.userToUpdate); 
 
-router.put('/update/:id', userController.update); 
+router.put('/update/:id', upload.any(), userController.update); 
 
 router.delete('/delete/:id', userController.delete); 
 
