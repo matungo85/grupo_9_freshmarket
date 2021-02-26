@@ -75,6 +75,8 @@ main h1 {
   flex-wrap: wrap;
   justify-content: space-around;
   flex-direction: column;
+  background-color: #d2e603;
+  margin: 1%;
 }
 
 #contenedor-2 li {

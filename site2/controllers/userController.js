@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
 const {check, validationResult, body} = require('express-validator');
-const db = require('../database/models')
+const db = require('../database/models'); 
 
 
 function getAllUsers () {
@@ -103,7 +103,54 @@ controller = {
         }   
 
         res.redirect('/');
-    }
+    }, 
+    detail: function(req, res){
+        db.User.findByPk(req.params.id)
+            .then(function(user){
+                res.render('user/userDetail', {user:user}); 
+            }) 
+    }, 
+    userToUpdate: function(req, res){
+        let userReq = db.User.findByPk(req.params.id) 
+        .then(function(user){
+            res.render('user/userUpdate', {user:user})
+        })
+    }, 
+    update: async function(req, res){
+
+        const id = req.params.id;
+        const user = await db.User.findByPk(id); 
+        
+
+        await db.User.update({
+            name: req.body.name,
+            lastname: req.body.lastname,
+            email: req.body.email,
+            avatar: req.files[0] ? req.files[0].filename : user.avatar,
+            phone: req.body.phone,
+            DNI: req.body.DNI,   
+            gender: req.body.gender,
+            rol: 10
+        }, {
+            where: {
+                id: req.params.id
+            } 
+        }); 
+        
+
+        res.redirect('/users/detail/' + req.params.id)
+
+    },
+    delete: function(req, res){ 
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        res.redirect('/')
+
+    } 
 
 }
 
