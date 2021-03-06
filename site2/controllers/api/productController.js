@@ -12,7 +12,7 @@ controller = {
         const categorias = await db.sequelize.query('select distinct categories.name, count(categories.name) as "productos en esta categoria" from products inner join categories on products.category_id = categories.id group by categories.name' )
 
        for (let i = 0; i < products.length; i++) {
-           products[i].setDataValue("url", "http://localhost:3000/api/products/" + products[i].id)
+           products[i].setDataValue("url",   + products[i].id)
         }
         let total = 0;
 
@@ -29,7 +29,8 @@ controller = {
             meta: {
                 count: products.length,
                 categorias: categorias[0],
-                total: total
+                total: total,
+                lastProduct: products[products.length-1]
 
             },
             data: products
