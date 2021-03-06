@@ -1,34 +1,26 @@
 <header>
 <div class="container">
     <div id="contenedor-1">
-    
-     
-        <img src="/images/logo.png" alt="" id='logo'>
-       
         <div id='buscador'>
             <form action="">
                 <i class="fas fa-search" height='50px'></i>
                 <input type="search" placeholder="¿Qué estás buscando?">
             </form>
         </div>
-
-        
+        <img src="/images/logo.png" alt="" id='logo'>
+          
         <div id=cuenta>
             <i class="fas fa-user"></i>
-            
             <% if (user) {%> 
                 <a href='/users/logout' id='botonCuenta'>Log Out</a>
             <% } else { %>
                 <a href='/users/login' id='botonCuenta'>Mi Cuenta</a>
             <% } %> 
         </div>
-        
         <div id="carrito">
             <a href="/product/cart"><i class="fas fa-shopping-cart"></i></a>
         </div>
-
     </div>
-
     <nav>
         <ul id='contenedor-2'>
             <li><a href="/product/list/1">ALMACÉN</a></li>
@@ -36,16 +28,13 @@
             <li><a href="/product/list/3">PANADERÍA</a></li>
             <li><a href="/product/list/4">CARNICERÍA</a></li>
         </ul>
-    
         <div>
             <% if (!user) { %> 
-                <p class="logUser">Usuario Logueado: No hay Usuario</p>
+                <p class="logUser">Usuario logueado: en este momento no hay usuario logueado</p>
                 <% } else { %> 
-                <p class="logUser">Usuario Logueado: <%= user.email  %> </p>
+                <p class="logUser">Usuario logueado: <%= user.email  %> </p>
             <% } %>
         </div>
-             
-
     </nav>
 </div>
 </header>

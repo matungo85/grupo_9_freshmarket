@@ -21,12 +21,20 @@ var upload = multer({ storage: storage })
 
 router.get('/register', guest, userController.register);
 
-router.post('/register',upload.any(), validator.register ,userController.processRegister);
-
 router.get('/login', guest, userController.login);
+
+router.post('/register',upload.any(), validator.register ,userController.processRegister);
 
 router.post('/login', validator.login, userController.processLogin);
 
 router.get('/logout', auth ,userController.logout)
+
+router.get('/detail/:id', userController.detail); 
+
+router.get('/update/:id', userController.userToUpdate); 
+
+router.put('/update/:id', upload.any(), userController.update); 
+
+router.delete('/delete/:id', userController.delete); 
 
 module.exports = router;
