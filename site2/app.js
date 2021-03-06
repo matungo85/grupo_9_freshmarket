@@ -7,11 +7,7 @@ var methodOverride = require('method-override');
 var session = require('express-session')
 var cookieVerifier = require('./middlewares/cookieVerifier');
 var locals = require('./middlewares/setLocals')
-<<<<<<< HEAD
-var cors = require('cors')
-=======
 var cors = require ('cors');
->>>>>>> 58c838b02d7a69f4b89d94e7edeae98e2b24f9f4
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -37,11 +33,7 @@ app.use(session({
   saveUninitialized: true
 }));
 app.use(cookieVerifier);
-<<<<<<< HEAD
-app.use(locals);
-=======
 app.use(locals)
->>>>>>> 58c838b02d7a69f4b89d94e7edeae98e2b24f9f4
 app.use(cors())
 
 
