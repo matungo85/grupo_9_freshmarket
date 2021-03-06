@@ -13,13 +13,13 @@ window.addEventListener ('load', () =>{
     let avatar = document.querySelector('#regAvatar')
     let password = document.querySelector('#regPassword')
     let errors = document.querySelectorAll('.errors')
-    let button = document.querySelector('button')
+    let button = document.querySelector('#submit')
 
     let loginMail = document.querySelector('#mail')
     let loginPassword = document.querySelector('#pass')
-    let loginButton = document.querySelector('#ingreso')
+    let loginButton = document.querySelector('#submit')
     console.log (form)
-   
+    console.log (button)
     button.addEventListener('click', function(event){
         
         if(name.value.length < 2){
