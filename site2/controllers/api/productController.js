@@ -18,7 +18,8 @@ controller = {
         let respuesta = {
             meta: {
                 count: products.length,
-                categorias: categorias[0]
+                categorias: categorias[0],
+                lastProduct: products[products.length - 1]
 
             },
             data: products
@@ -33,7 +34,7 @@ controller = {
 
         const producto = await db.Product.findByPk(id, {include: ["category"]});
 
-        producto.setDataValue("url de la imagen", 'http://localhost:3000/images/' + producto.image)
+        producto.setDataValue("urlImage", 'http://localhost:3000/images/' + producto.image)
 
         res.json(producto);
     },
