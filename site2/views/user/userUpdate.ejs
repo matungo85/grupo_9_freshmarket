@@ -1,19 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <%- include('../partials/head')%>
-
-
 <body>
-    <!---- comienzo del header -->  
-
+    <!---- Comienzo del header -->  
     <%- include('../partials/header') %>   
-
-      <Main>
-         <h1 id="regTitle">Mis Datos</h1>
+      <main>
          <div id='register'>
-            
-
+            <h1 id="regTitle">Mis Datos</h1>
             <% if (typeof errors != 'undefined') { %> 
                <ul>
                   <% for (error of errors) { %>
@@ -21,34 +14,26 @@
                   <% } %> 
                </ul>
             <% } %> 
-            
             <ul id="regErrors"></ul>
-
             <form class='form-log' action="/users/update/<%=user.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
-               
                <div id="reg-name">
                   <label for="name">Nombre</label>
                   <input type="text" name="name" id="regName" value="<%=user.name%>">
                   <p class="errors" id="errorName">El campo debe tener al menos dos caracteres.</p> 
                </div>
-            
                <div id="reg-lastname">   
                   <label for="surname">Apellido</label> 
                   <input type="text" name="lastname" id="regLastname" value="<%=user.lastname%>"> 
                   <p class="errors" id="errorlastname">El campo debe tener al menos dos caracteres.</p> 
                </div>
-               
-
                <div id="reg-tel">
                   <label for="tel">Teléfono</label>
                   <input type="tel"  name="phone" id="regPhone" value="<%=user.phone%>"> 
                </div>
-
                <div id="reg-dni">
-                  <label for="dni">Documento</label>
+                  <label for="dni">DNI</label>
                   <input type="text" name="dni" id="regDni" value="<%=user.DNI%>"> 
                </div>
-
                <div id="reg-gender">
                   <label for="gender">Género</label>
                   <select name="gender" id="regGender" >
@@ -57,36 +42,22 @@
                      <option value="other">Otro</option>
                   </select>
                </div>
-
                <div id="reg-email">
                   <label for="email">Correo Electrónico</label>
                   <input type="email" name="email" id="regEmail" value="<%=user.email%>">
                   <p class="errors" id="errorEmail">El contenido no es una direccion de correo válida.</p> 
                </div>
-
                <div id='reg-avatar'>
                   <label for="avatar">Imagen</label>
-                  <img src="/images/users/<%= user.avatar%>" alt="">
-                  <input type="file" name="avatar" id="regAvatar" value="<%=user.avatar%>">
-
-                 
+                  <img src="/images/users/<%= user.avatar%>" alt="avatar-user" width="200">
+                  <input type="file" name="avatar" id="regAvatar" value="<%=user.avatar%>"> 
                </div>
-
-             
-
                <div>
-                  <button type="submit" id="submit">Editar mi cuenta</button>
+                  <button type="submit" id="submit" class="w-100 btn btn-lg btn-primary">Actualizar mis datos</button>
                </div>
-
             </form>
          </div>
-         
-
-      </Main>
-
-
+      </main>
     <%- include('../partials/footer')%>
-
-
 </body>
 </html>

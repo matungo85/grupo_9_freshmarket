@@ -1,11 +1,32 @@
-<p><%=user.name%></p>
-<p><%=user.email%></p>
-<p><%=user.phone%></p>
-<p><%=user.DNI%></p>
-<p><%=user.gender%></p>
-
-<a href="/users/update/<%=user.id%>"><button>Editar</button></a>
-
-<form action="/users/delete/<%=user.id%>?_method=DELETE" method="POST">
-    <button class="btn" type="submit">Borrar</button> 
-</form>
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%>
+<body>
+    <!---- Comienzo del header -->  
+    <%- include('../partials/header') %> 
+    <main>
+        <div class="container">
+            <h2 id="regTitle">Mis datos</h2>
+            <div class="detail">
+                <h6>Nombre</h6>
+                    <p><%=user.name%></p>
+                <h6>Correo electrónico</h6>
+                    <p><%=user.email%></p>
+                <h6>Teléfono</h6>
+                    <p><%=user.phone%></p>
+                <h6>DNI</h6>
+                    <p><%=user.DNI%></p>
+                <h6>Género</h6>
+                    <p><%=user.gender%></p>
+                <h6>Foto de perfil</h6>
+                    <img src="/images/users/<%= user.avatar%>" alt="avatar-user" width="200">
+                <a href="/users/update/<%=user.id%>"><button class="w-100 btn btn-lg btn-primary">Editar</button></a>
+                <form action="/users/delete/<%=user.id%>?_method=DELETE" method="POST">
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Borrar</button> 
+                </form>
+            </div>
+        </div>
+    </main>
+<%- include('../partials/footer')%>
+</body>
+</html>

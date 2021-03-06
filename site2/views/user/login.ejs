@@ -4,60 +4,46 @@
     <%- include('../partials/head')%>
 
 <body>
-    <!---- comienzo del header -->  
+    <!---- Comienzo del header -->  
 
     <%- include('../partials/header') %>
 
-    <main>
-        <h1>Formulario de Login</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="login">
+                    <main class="form-signin">
+                        <% if (typeof errors != 'undefined') { %>
+                            <ul>
+                                <% for (error of errors) { %>
+                                <li> <%= error.msg  %> </li> 
+                                <% } %>  
+                            </ul>
+                        <% } %>
+                        <form action="/users/login" method="POST" class='form-log' id='formLogin'>
+                          <h2 class="h3 mb-3 fw-normal">Formulario para ingresar</h2>
+                          <label for="inputEmail" class="visually-hidden"></label>
+                          <input type="email" name='mail' id="email" class="form-control" placeholder="Correo electrónico" required autofocus>
+                          <p class="errors" id="errorLoginEmail">El contenido no es una direccion de correo válida.</p>
+                          <label for="inputPassword" class="visually-hidden"></label>
+                          <input type="password" name='pass' id="pass" class="form-control" placeholder="Contraseña" required>
+                          <p class="errors" id="errorLoginPassword">La contraseña debe tener al menos ocho caracteres.</p> 
+                          <button class="w-100 btn btn-lg btn-primary" type="submit" value="Ingresar" id="ingreso">Ingresar</button>
+                          <div class="checkbox mb-3">
+                            <label>
+                                <input type="checkbox" id='rec' name='rec' value='si'>
+                                <label for="rec">Recordarme</label>
+                            </label>
+                          </div>
+                          <div id='nuevoPass'><a href="#">Olvidé mi contraseña</a></div>
+                          <div id='registro'><a href="/users/register">Si no tenés cuenta registrate acá</a></div>
+                        </form>
+                      </main>
 
-        <div id='login'>
-            
-            <div id='titulo'>
-                <h3>Iniciar sesión</h3>
+                </div>
             </div>
-            
-            <% if (typeof errors != 'undefined') { %>
-                <ul>
-                    <% for (error of errors) { %>
-                    <li> <%= error.msg  %> </li> 
-                    <% } %>  
-                </ul>
-            <% } %>
-
-            <form action="/users/login" method="POST" class='form-log' id='formLogin'>
-                <div id='campo-mail'>
-                    <label for="mail"> Ingresá tu email</label><br>
-                    <input type="email" name='mail' id="mail">
-                    <p class="errors" id="errorLoginEmail">El contenido no es una direccion de correo válida.</p>
-                </div>
-
-                <div id='campo-pass'>
-                    <label for="pass"> Ingresá tu contraseña</label><br>
-                    <input type="password" name='pass' id="pass">
-                    <p class="errors" id="errorLoginPassword">La contraseña debe tener al menos ocho caracteres.</p> 
-                </div>  
-
-                <div>
-                    <button type="submit" value="Ingresar" id="ingreso">Ingresar </button>
-                </div>
-
-                <div id='nuevoPass'><a href="#">Olvidé mi contraseña</a></div>
-
-                <div id='recordar'>
-                    <input type="checkbox" id='rec' name='rec' value='si'>
-                    <label for="rec">Recordarme</label>
-                </div>
-
-                <div id='registro'><a href="/users/register">Registrate si no tenés cuenta</a></div>
-            </form>
-            
-            <div></div>
         </div>
-    </main>
-
+    </div>
     <%- include('../partials/footer')%>
-
-
 </body>
 </html>
