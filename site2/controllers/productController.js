@@ -30,7 +30,7 @@ controller = {
          let category = req.params.category; 
  
          const products = await db.Product.findAll({
-             where: {category_id: category}, include: ["category"]
+             where: {category_id: category}, include: ["category"]           
             })
 
       
