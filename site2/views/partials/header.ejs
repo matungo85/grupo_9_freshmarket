@@ -16,9 +16,17 @@
                         
                         <div class="top_bar_content ml-auto">
                             <div class="top-bar-user">
-                                <i class="fas fa-user"></i>
-                                <div class="top-bar-icon"></div><a href="/users/register">Registrarse</a>
+                                <i class="fas fa-user" aria-hidden="true"></i>
+                                <div class="top-bar-icon"></div>
+                                <% if (!user) {%> 
+                                    <a href="/users/register">Registrarse</a>
+                                <% } else { %>
+                                    <a href="/users/detail/<%=user.id%>">Mi cuenta</a>
+                                    <!--
+                                    <p class="top-bar-icon">Hola <%= user.name  %> </p>-->
+                                <% } %> 
                             </div>
+
                             <div class="top-bar-user">
                                 <i class="fas fa-sign-in-alt"></i>
                                 <div class="top-bar-icon"></div>
@@ -27,11 +35,15 @@
                                 <% } else { %>
                                     <a href="/users/login">Ingresar</a>
                                 <% } %> 
-                            </div>
-                            <div class="top-bar-user">
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <div class="top-bar-icon"></div><a href="/product/cart">Carrito</a>
-                            </div>     
+                            </div> 
+                                <!-- User login 
+                                <div>
+                                    <% if (!user) { %> 
+                                        <p class="logUser">No hay usuario logueado</p>
+                                        <% } else { %> 
+                                        <p class="logUser">Hola <%= user.email  %> </p>
+                                    <% } %>
+                                </div> -->
                         </div>
                     </div>
                 </div>
@@ -53,14 +65,6 @@
                 </div>
             </div>
         </div>
-    <!-- User login -->
-        <div>
-            <% if (!user) { %> 
-                <p class="logUser">No hay usuario logueado</p>
-                <% } else { %> 
-                <p class="logUser">Usuario: <%= user.email  %> </p>
-            <% } %>
-        </div>
     <!-- Nav -->
     <div class="main-nav">
         <div class="container">
@@ -78,17 +82,29 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/product/list/2">Verdulería <span class="sr-only"></span></a>
                               </li>
-                              <li class="nav-item">
+                            <li class="nav-item">
                                 <a class="nav-link" href="/product/list/3">Panadería <span class="sr-only"></span></a>
-                              </li>
-                              <li class="nav-item">
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="/product/list/4">Carnicería <span class="sr-only"></span></a>
-                              </li>
+                            </li>
                           </ul>
-                          <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar aquí" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                          </form>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Buscar aquí" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                            </form>
+                          <!-- Mi cuenta 
+                            <div class="container ">
+                                <div class="my-account">
+                                    <i class="fas fa-user" aria-hidden="true"></i>
+                                    <div class="top-bar-icon"></div><a href="/users/detail/<%=user.id%>">Mi cuenta</a>
+                                </div> -->
+                                <!-- Carrito -->
+                                <div class="cart">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <div class="top-bar-icon"></div><a href="/product/cart">Carrito</a>
+                                </div>
+                            </div>
                         </div>
                       </nav>
                 </div>
