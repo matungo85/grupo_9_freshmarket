@@ -147,9 +147,12 @@ main h1 {
   transform: translateY(-50%); 
 }
 
+.header-main {
+  display: flex;
+}
 
 .logo-container {
-  height: 80px; 
+  height: 100px; 
   margin-top: 10%;
   padding: 10%;
 }
@@ -211,6 +214,7 @@ i {
   text-align: end;
   margin: 0.5%;
 }
+
 
 #container {
   display: flex;
@@ -314,6 +318,16 @@ i {
   color: #374251 !important;
 }
 
+.my-account {
+  margin: 0.5%;
+}
+  
+.cart {
+  margin: 1%;
+}
+
+
+
 /*-------------------Fin del Header-----------------------*/
 
 /*-------------------Comienzo del Carousel-----------------------*/
@@ -332,14 +346,12 @@ i {
 /*-------------------Fin del Carousel-----------------------*/
 
 /*-------------------Comienzo de la sección de info-----------------------*/
-.container-info {
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 5% auto;
-  align-items: center;
-}
 
+.row-info {
+  justify-content: space-around;
+  margin-bottom: 7%;
+  padding: 5%
+}
 .btn-primary {
   border-color: #3e978b !important ;
   background-color: #3e978b !important;
@@ -349,9 +361,7 @@ i {
 }
 
 /*-------------------Fin de la sección de info-----------------------*/
-.form-signin{
-  margin:5%;
-}
+
 
 /*-------------------Comienzo sección central -----------------------*/
 
@@ -648,6 +658,10 @@ footer #info {
   padding: 10px;
 }
 
+.copyright {
+  background-color: #29313D; 
+}
+
 /*-------------------Fin del footer -----------------------*/
 
 /*-------------------Comienzo carrito -----------------------*/
@@ -802,10 +816,6 @@ section p {
 
 body {
   background: #eee
-}
-
-.cart {
-  background: #fff
 }
 
 .p-about {
