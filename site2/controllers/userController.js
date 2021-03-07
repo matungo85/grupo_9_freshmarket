@@ -60,13 +60,18 @@ controller = {
                 gender: req.body.gender,
                 rol: 10
             })
-    
-            res.redirect('/');
+            
+            /*res.redirect('/');*/
+            res.render('user/registered')
 
         } else {
             res.render('user/register', {errors: errors.errors})
         }
 
+
+    },
+    registered: function(req, res){
+        res.render('user/registered')
 
     },
 
