@@ -931,7 +931,6 @@ label.radio input:checked+span {
 #productLoad {
   display: flex;
   flex-direction: column;
-  background-color: #3e978b;
   border-radius: 0.5%;
 }
 
