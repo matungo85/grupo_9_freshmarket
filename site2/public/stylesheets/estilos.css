@@ -361,7 +361,61 @@ i {
 }
 
 /*-------------------Fin de la sección de info-----------------------*/
+/*-------------------Comienzo de productos destacados-----------------------*/
 
+#destacados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2% 0 30px 0;
+}
+
+#destacados article {
+  max-width: 30%;
+  padding: 5px 15px;
+  margin: 2%;
+}
+
+.destacado {
+  width: 70%;
+  padding: 5px 15px;
+  display: block;
+  margin: 0 auto;
+}
+
+.container-destacados {
+  margin-top: 7%;
+}
+
+article h5 {
+  text-align: center;
+  margin: 4%;
+}
+article a {
+  color: #374251 ;
+  text-decoration: none;
+}
+
+article p {
+  text-align: center;
+}
+
+article a:hover {
+  color: #828282;
+  text-decoration: none;
+  
+}
+.productos-destacados {
+  border-color: #828282;
+}
+
+hr {
+  width: 15%;
+  margin: 0 auto;
+}
+
+/*-------------------Fin de productos destacados-----------------------*/
 
 /*-------------------Comienzo sección central -----------------------*/
 
@@ -378,24 +432,7 @@ h2 {
   margin: 5% 0 0 0  !important;
 }
 
-#destacados {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
 
-.destacado {
-  width: 70%;
-  height: 40vh;
-  display: block;
-  margin: 0 auto;
-}
-
-#destacados article {
-  padding: 5px 15px;
-}
 
 /*-------------------Fin sección central -----------------------*/
 
@@ -804,10 +841,10 @@ section p {
   text-align: center;
 }
 
-/*-------------------Fin carrito -----------------------*/
+Fin carrito viejo -----------------------*/
 
 
-/*------------------- Comienzo carrito boostrap-----------------------*/
+/*------------------- Comienzo carrito nuevo-----------------------*/
 
 .carrito {
   margin: 2%;
@@ -821,7 +858,9 @@ section p {
 }
 
 .product-details {
-  padding: 10px
+  padding: 10px; 
+  margin: 5% auto;
+  width: 50%;
 }
 
 body {
@@ -918,7 +957,7 @@ label.radio input:checked+span {
 }
 
 
-/*-------------------Fin carrito boostrap -----------------------*/
+/*-------------------Fin carrito viejo -----------------------*/
 
 /*------------------------Comienzo de productLoad------------*/
 
@@ -931,7 +970,6 @@ label.radio input:checked+span {
 #productLoad {
   display: flex;
   flex-direction: column;
-  background-color: #3e978b;
   border-radius: 0.5%;
 }
 
@@ -1023,8 +1061,6 @@ select {
 
 input[type="submit"] {
   width: 100%;
-  background-color: #eff48e;
-  color: black;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -1054,6 +1090,8 @@ input[type="search"] {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+
 /*------------------------Fin de productLoad-----------------*/
 
 /*------------------- Comienzo de info-----------------------*/
@@ -1175,7 +1213,7 @@ button {
   }
 
   .destacado {
-    width: 100%;
+    width: auto;
     height: 30vh;
     display: block;
     margin: 0 auto;

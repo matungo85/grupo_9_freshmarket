@@ -1,41 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
     <%- include('../partials/head')%>
-
-
 <body>
-    <!---- comienzo del header -->  
-
+    <!---- Comienzo del header -->  
     <%- include('../partials/header') %>
-    <!---- comienzo del main --> 
-    
+    <!---- Comienzo del main --> 
     <main>
     <div class="container">
             <h1>Productos </h1>
-
             <div class="products">
                 <% for (let product of products) { %>
-
-                    <div class="product-box">
-        
+                    <div class="product-box">    
                         <img src="/images/<%= product.image %> " alt="" width="300px">
                         <h4><a href="/product/<%= product.id %>/detail"><%=product.name%> <%=product.brand%></a></h4>
                         <p>$ <%=product.price%></p>
                         <p><%=product.category.name%></p>
-        
                     </div>
-            
                 <% } %>
             </div>
     </div>   
-        
-
-
     </main>
-
     <%- include('../partials/footer')%>
-
 </body>
 </html>

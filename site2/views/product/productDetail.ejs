@@ -15,47 +15,34 @@
     <main>
         <div class="container">
             <section>
-                <div class="imagen-detail">
-                    <img src="/images/<%= producto.image%>" alt="foto-producto" width="400">
-                </div>
-                <div>
-                    <h4 class="name"><%= producto.name%> - Marca <%= producto.brand%></h4>
-                    <p class="description"><%= producto.description%></p>
-                    <p class="codigo">Código: <%= producto.id%></p>
-                    <p class="precio"> $ <%= producto.price%> - <%= producto.weight_volume%> <%= producto.unit%></p>
-                    <p> En descuento: $ <%= producto.discount%> </p>
-                    <br>
-                    
-                </div>
-                <div class="cantidad-btns">
-                    <input id="btn-agregar" type="number">
-                <div>
-                    <button type="button">Agregar</button>
-                    <form action="/product/<%= producto.id%>?_method=DELETE" method="POST">
-                        <button class="btn" type="submit">Borrar</button> 
-                    </form>
-                    <form action="/product/<%= producto.id%>/edit" method="GET">
-                        <button class="btn" type="submit">Editar</button> 
-                    </form>
-                </div> 
-                </div>       
-            </section>
+                <div class="product-details">
+                    <div class="imagen-detail">
+                        <img src="/images/<%= producto.image%>" alt="foto-producto" width="400">
+                    </div>
+                    <div>
+                        <h4 class="name"><%= producto.name%> - Marca <%= producto.brand%></h4>
+                        <p class="description"><%= producto.description%></p>
+                        <p class="codigo">Código: <%= producto.id%></p>
+                        <p class="precio"> $ <%= producto.price%> - <%= producto.weight_volume%> <%= producto.unit%></p>
+                        <p> En descuento: $ <%= producto.discount%> </p>
+                        <br>
+                        
+                    </div>
+                    <div class="cantidad-btns">
+                        <input id="btn-agregar" type="number">
+                    <div>
+                        <button class="w-100 btn btn-lg btn-primary" type="button">Agregar</button>
+                        <form action="/product/<%= producto.id%>/edit" method="GET">
+                            <button class="w-100 btn btn-lg btn-primary" class="btn" type="submit">Editar</button> 
+                        </form>
+                        <form action="/product/<%= producto.id%>?_method=DELETE" method="POST">
+                            <button class="w-100 btn btn-lg btn-primary" class="btn" type="submit">Borrar</button> 
+                        </form>
+                        
+                    </div> 
+                    </div> 
 
-            <section>
-                <div id='info'>
-                    <div>
-                        <i class="far fa-question-circle"></i>
-                        <p>Cómo comprar</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-truck"></i>
-                        <p>Entrega</p>
-                    </div>
-                    <div>
-                        <i class="fas fa-dollar-sign"></i>
-                        <p>Forma de Pago</p>
-                    </div>
-                </div>
+                </div>      
             </section>
         </div>
     </main>

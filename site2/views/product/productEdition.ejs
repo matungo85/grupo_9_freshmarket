@@ -23,7 +23,7 @@
 
             <form id="productLoad" method="POST" action="/product/<%= product.id %>?_method=PUT"  enctype="multipart/form-data">
                <div>
-                     <h2>Editar un producto</h2>
+                     <h2>Editar producto</h2>
                      <div>
                         <label for="productName">Nombre</label>  
                         <input type="text" name="productName" id="productName" value="<%= product.name %>"> 
@@ -35,7 +35,7 @@
                      </div>
 
                      <div>
-                        <label for="volumen">Volúmen/peso</label>
+                        <label for="volumen">Volúmen / peso</label>
                         <input type="number" name="unidad" id="unidad" value="<%= product.weight_volume%>">
                         <select name="volumen" id="volumen" value="<%= product.unit%>">
                            <option value="kilo">kilo(s)</option>
@@ -46,12 +46,12 @@
                      </div>
 
                      <div>
-                        <label for="price">Precio Unitario</label>   
+                        <label for="price">Precio unitario</label>   
                         <input type="number" name="price" id="price" value="<%= product.price%>"> 
                      </div>
 
                      <div>
-                        <label for="discount">Precio en Promoción</label>   
+                        <label for="discount">Precio en promoción</label>   
                         <input type="number" name="discount" id="discount" value="<%= product.discount%>"> 
                      </div>
 
@@ -80,7 +80,7 @@
 
                      
                   <div>
-                        <label for="productImage">Agregar Imagen</label>
+                        <label for="productImage">Agregar imagen</label>
                         <div style="width: 300px">
                            <img src="/images/<%= product.image%>" alt="" style="width: 100%">
                         </div>
@@ -90,7 +90,7 @@
                      </div> 
                   
                      <div>
-                        <input type="submit" value="Agregar producto">
+                        <input class="w-100 btn btn-lg btn-primary" type="submit" value="Actualizar producto">
                      </div>
                </div>
 
