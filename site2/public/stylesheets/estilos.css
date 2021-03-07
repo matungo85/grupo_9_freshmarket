@@ -701,7 +701,18 @@ footer #info {
 
 /*-------------------Fin del footer -----------------------*/
 
-/*-------------------Comienzo carrito 
+/*-------------------Comienzo del registered -----------------------*/
+.registered  {
+  margin: 7% auto;
+  text-align: center;
+}
+.form-signin {
+  margin: 10% 0 20% 0;
+}
+
+/*-------------------Fin del registered -----------------------*/
+/*-------------------Comienzo carrito -----------------------*/
+
 #mi-carrito {
   padding: 20px;
   width: 100%;
