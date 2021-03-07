@@ -21,6 +21,8 @@ var upload = multer({ storage: storage })
 
 router.get('/register', guest, userController.register);
 
+router.get('/registered', userController.registered); 
+
 router.get('/login', guest, userController.login);
 
 router.post('/register',upload.any(), validator.register ,userController.processRegister);
