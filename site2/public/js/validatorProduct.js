@@ -10,11 +10,12 @@ window.addEventListener('load',()=>{
     let image = document.querySelector('#imageProduct')
     let errors = document.querySelectorAll('.errors')
 
-    console.log(productForm)
+    
 
     productForm.onsubmit = function (event){
+        event.preventDefault()
        
-        if(productName.value.length < 2){
+        if(productName.value.length < 4){
             errorproductName.style.display = 'block'            
         }else{ 
             errorProductName.style.display = 'none'
@@ -37,6 +38,36 @@ window.addEventListener('load',()=>{
         }else{ 
             errorprice.style.display = 'none'
         };
+
+     
+
+
+        if(description.value.length<20){
+             errorDescription.style.display ='block'
+            }else{
+                errorDescription.style.display = 'none'
+            };
+
+        const auxi =['jpg','jpeg','png', 'gif']
+            
+
+        if(!image.value||!auxi.includes((image.value).substr((image.value).lastIndexOf('.') + 1))){
+            errorImage.style.display = 'block'
+        } else {
+            errorImage.style.display = 'none'
+        }
+            
+            
+        
+
+
+           
+            
+
+
+
+
+
         
         for (let error of errors){
             if(error.style.display == "block"){

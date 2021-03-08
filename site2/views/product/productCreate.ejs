@@ -22,7 +22,7 @@
                      <div>
                         <label for="productName">Nombre</label>  
                         <input type="text" name="productName" id="productName" placeholder="Ej: Aceite de Oliva"> 
-                        <p class="errors" id="errorproductName">El campo debe tener al menos dos caracteres.</p> 
+                        <p class="errors" id="errorproductName">El campo debe tener al menos cinco caracteres.</p> 
                      </div>
                      <div>
                         <label for="brand">Marca</label>
@@ -43,7 +43,7 @@
                      <div>
                         <label for="price">Precio Unitario</label>   
                         <input type="number" name="price" id="price" placeholder="$"> 
-                        <p class="errors" id="errorprice">El valor no puede ser menor que 0.01.</p> 
+                        <p class="errors" id="errorprice">El valor debe ser mayor a 0.01.</p> 
                      </div>
                      <div>
                         <label for="discount">Precio en Promoción</label>   
@@ -60,11 +60,12 @@
                      <div>
                         <label for="productDescription">Descripción</label>
                         <textarea name="description" id="productDescription"cols="40" rows="10" placeholder= "Incorporá aquí una descripción del producto"></textarea>
-                        <p class="errors" id="errorName">El campo debe tener al menos dos caracteres.</p> 
+                        <p class="errors" id="errorDescription">El campo debe tener al menos 20 caracteres.</p> 
                      </div>
                   <div>
                         <label for="productImage">Agregar imagen</label>
                         <input type="file" id='imageProduct' name="imageProduct">
+                        <p class="errors" id="errorImage">La imagen es obligatoria.</p> 
                      </div> 
                      <div>
                         <input type="submit" value="Agregar producto">
