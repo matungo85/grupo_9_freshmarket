@@ -4,7 +4,7 @@ window.addEventListener ('load', () =>{
     /********************validation Register********************/
     
     
-    let form = document.querySelector('#formLogin')
+   
     let name = document.querySelector('#regName')
     //let errorName = document.querySelector('#errorName')
     let lastname = document.querySelector('#regLastname')
@@ -17,9 +17,8 @@ window.addEventListener ('load', () =>{
     let errors = document.querySelectorAll('.errors')
     let button = document.querySelector('#submit')
     
-    let loginMail = document.querySelector('#email')
-    let loginPassword = document.querySelector('#pass')
-    let loginButton = document.querySelector('#ingreso')
+    
+    
     
     button.addEventListener('click', function(event){
         
@@ -53,7 +52,7 @@ window.addEventListener ('load', () =>{
                 
             }
         }
-    })
+    });
     
     
     /******************End of validation Register********************/
@@ -61,7 +60,7 @@ window.addEventListener ('load', () =>{
     
     /*********************Validation Login***************************/
     
-    
+    /*
     
     loginButton.addEventListener('click',function(e){
         console.log(e)
@@ -84,16 +83,8 @@ window.addEventListener ('load', () =>{
             }
         }
         
-        
     })
-    
-    /************************Validation products *******************/
-    
-    
-    let productForm = document.querySelector('#productLoad')
-    console.log(productForm)
-    
-    console.log ("Estoy acá")
+    */
     
 })
 
