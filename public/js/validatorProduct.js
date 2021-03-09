@@ -13,7 +13,7 @@ window.addEventListener('load',()=>{
     
 
     productForm.onsubmit = function (event){
-        event.preventDefault()
+        
        
         if(productName.value.length < 4){
             errorproductName.style.display = 'block'            
