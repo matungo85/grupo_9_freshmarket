@@ -1152,6 +1152,9 @@ button {
   background-color: #3e978b !important ;
   color: white !important;
 }
+.btn-outline-success:hover i {
+  color: #fff
+}
 
 /*------------------- Fin de info-----------------------*/
 

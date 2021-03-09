@@ -6,17 +6,17 @@ const db = require('../database/models')
 
 module.exports = {
     register: [
-        body('name').notEmpty().withMessage('El campo nombre es Obligatorio').bail()
+        body('name').notEmpty().withMessage('El campo nombre es obligatorio').bail()
                 .isLength({min: 2}).withMessage('El nombre debe tener al menos dos caracteres'),
-        body('lastname').notEmpty().withMessage('El campo apellido es Obligatorio').bail()
+        body('lastname').notEmpty().withMessage('El campo apellido es obligatorio').bail()
                 .isLength({min: 2}).withMessage('El apellido debe tener al menos dos caracteres'),
-        body('email').notEmpty().withMessage('El campo email es Obligatorio').bail()
+        body('email').notEmpty().withMessage('El campo email es obligatorio').bail()
                 .isEmail().withMessage('El campo debe ser un email').bail()
                 .custom((value) => {
 
                     return db.User.findOne({where: {email: value}}).then((user) => {
                         if (user) {
-                            return Promise.reject("el email esta registrado")
+                            return Promise.reject("El email esta registrado")
                         }
                     })
 
@@ -45,7 +45,7 @@ module.exports = {
                     }
                   })
                 }
-            ).withMessage('Credenciales Inválidas') 
+            ).withMessage('Credenciales inválidas') 
     ],
 
     product: [
