@@ -16,6 +16,13 @@
                         
                         <div class="top_bar_content ml-auto">
                             <div class="top-bar-user">
+                                <% if (!user) { %> 
+                                    <p class="logUser">No hay usuario logueado</p>
+                                    <% } else { %> 
+                                    <p class="logUser">Hola <%= user.name  %> </p>
+                                <% } %>
+                            </div> 
+                            <div class="top-bar-user">
                                 <i class="fas fa-user" aria-hidden="true"></i>
                                 <div class="top-bar-icon"></div>
                                 <% if (!user) {%> 
@@ -26,7 +33,7 @@
                                     <p class="top-bar-icon">Hola <%= user.name  %> </p>-->
                                 <% } %> 
                             </div>
-
+                            
                             <div class="top-bar-user">
                                 <i class="fas fa-sign-in-alt"></i>
                                 <div class="top-bar-icon"></div>
@@ -37,13 +44,7 @@
                                 <% } %> 
                             </div> 
                                 
-                                <div>
-                                    <% if (!user) { %> 
-                                        <p class="logUser">No hay usuario logueado</p>
-                                        <% } else { %> 
-                                        <p class="logUser">Hola <%= user.email  %> </p>
-                                    <% } %>
-                                </div> 
+                                
                         </div>
                     </div>
                 </div>
@@ -65,12 +66,66 @@
                 </div>
             </div>
         </div>
-    <!-- Nav -->
+
+    <!-- NavBar nuevo-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="menu-responsive">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/product/list">Todos <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/product/list/1">Almacén <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/product/list/2">Verdulería <span class="sr-only"></span></a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/product/list/3">Panadería <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/product/list/4">Carnicería <span class="sr-only"></span></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Carrito
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/product/cart">Carrito</a>
+                <a class="dropdown-item" href="#">Mis productos</a>
+                <a class="dropdown-item" href="#">Compras anteriores</a>  
+              </div>
+            </li>
+            <li>
+                <div>
+                    <% if (user) { %> 
+                        <a class="nav-link" href="/product/create">Agregar producto <span class="sr-only"></span></a>
+                    <% } %>
+                </div> 
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <!--NavBar nuevo-->
+    <!-- Nav
     <div class="main-nav">
         <div class="container">
             <div class="row">
                 <div class="col">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                           <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
@@ -99,11 +154,12 @@
                                     <i class="fas fa-user" aria-hidden="true"></i>
                                     <div class="top-bar-icon"></div><a href="/users/detail/<%=user.id%>">Mi cuenta</a>
                                 </div> -->
-                                <!-- Carrito -->
+                                <!-- Carrito 
                                 <div class="cart">
                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     <div class="top-bar-icon"></div><a href="/product/cart">Carrito</a>
                                 </div>
+                                -->
                             </div>
                         </div>
                       </nav>

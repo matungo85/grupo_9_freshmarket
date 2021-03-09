@@ -21,22 +21,22 @@ module.exports = {
                     })
 
                 }).bail(),
-        body('phone').notEmpty().withMessage('El campo teléfono es Obligatorio').bail(),
-        body('dni').notEmpty().withMessage('El campo dni es Obligatorio').bail(),
+        body('phone').notEmpty().withMessage('El campo teléfono es obligatorio').bail(),
+        body('dni').notEmpty().withMessage('El campo DNI es obligatorio').bail(),
         body('avatar').custom((value, {req}) => req.files[0]).withMessage('La imagen es obligatoria').bail()
                 .custom((value, {req}) => {
                     const auxi = ['.jpg', '.png', '.jpeg', '.gif'];
                     extention = path.extname(req.files[0].originalname)
                     return auxi.includes(extention)
-                }).withMessage('extension invalida').bail(),
-        body('password').isLength({min: 8}).withMessage('la contraseña debe tener 8 o mas caracteres')
-                .custom((value, {req}) => value == req.body.retype).withMessage('la contraseñas ingresadas no coinciden')
+                }).withMessage('Extension invalida').bail(),
+        body('password').isLength({min: 8}).withMessage('La contraseña debe tener 8 o mas caracteres')
+                .custom((value, {req}) => value == req.body.retype).withMessage('La contraseñas ingresadas no coinciden')
 
     ],
 
     login: [
-        body('mail').isEmail().withMessage('el campo debe ser un email').bail()
-            .notEmpty().withMessage('el campo Email es obligatorio').bail()
+        body('mail').isEmail().withMessage('El campo debe ser un email').bail()
+            .notEmpty().withMessage('El campo email es obligatorio').bail()
             .custom((value, {req}) => {
 
                 return db.User.findOne({where: {email: value}}).then(user => {
@@ -74,6 +74,6 @@ module.exports = {
                 }
                 return true
                 
-                }).withMessage('extension invalida').bail()
+                }).withMessage('Extensión invalida').bail()
     ]
 }
