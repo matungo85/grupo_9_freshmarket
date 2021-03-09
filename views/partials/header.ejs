@@ -92,16 +92,7 @@
                 <a class="nav-link" href="/product/list/4">Carnicería <span class="sr-only"></span></a>
             </li>
             
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Carrito
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="/product/cart">Carrito</a>
-                <a class="dropdown-item" href="#">Mis productos</a>
-                <a class="dropdown-item" href="#">Compras anteriores</a>  
-              </div>
-            </li>
+            
             <li>
                 <div>
                     <% if (user) { %> 
@@ -114,6 +105,25 @@
             <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
           </form>
+          <!-- Carrito -->
+                                <div class="cart">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <div class="top-bar-icon"></div><a id="navbarDropdown"  href="/product/cart">Carrito</a>
+                                    
+                                </div>
+                                <!--
+                                <li class="nav-item dropdown">
+                                    
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Carrito
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                      <a class="dropdown-item" href="/product/cart">Carrito</a>
+                                      <a class="dropdown-item" href="#">Mis productos</a>
+                                      <a class="dropdown-item" href="#">Compras anteriores</a>  
+                                    </div>
+                                  </li>-->
+                                
         </div>
       </nav>
     <!--NavBar nuevo-->
