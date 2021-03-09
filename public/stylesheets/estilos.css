@@ -110,11 +110,18 @@ h6 {
 
 /*-------------------Fin configuraciones generales -----------------------*/
 
+
 /*-------------------Comienzo del Header -----------------------*/
 
-header {
+.header {
   background-color: var(--logo);
   width: 100%;
+  position: fixed;
+  z-index: 20;
+  top: 0px;
+}
+.dummy-header {
+  height: 200px;
 }
 
 main h1 {
@@ -152,7 +159,7 @@ main h1 {
 }
 
 .logo-container {
-  height: 100px; 
+  height: 85px; 
   margin-top: 10%;
   padding: 10%;
 }
@@ -164,10 +171,10 @@ main h1 {
 
 .main-nav {
   width: 100%;
-  border-top: solid 1px #f2f2f2;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  background: #FFFFFF; 
-  margin-top: 56px
+  background: #f8f9fa; 
+  margin-top: 56px; 
+  padding: 2px 0;
 }
 
 .main-nav-content {
@@ -303,12 +310,6 @@ i {
   align-items: center;
 }
 
-.main-nav {
-  width: 100%;
-  border-top: solid 1px #f2f2f2;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa;
-}
 .main-nav-content {
   width: 100%;
   height: 60px
@@ -333,10 +334,8 @@ i {
 /*-------------------Comienzo del Carousel-----------------------*/
 
 .container-carousel {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  z-index: 1;
+  overflow: auto;
+  position: relative;
 }
 
 .carouselExampleIndicators {
@@ -378,7 +377,7 @@ i {
 }
 
 .destacado {
-  width: 70%;
+  width: 100%;
   padding: 5px 15px;
   display: block;
   margin: 0 auto;
@@ -410,7 +409,7 @@ article a:hover {
   border-color: #828282;
 }
 
-hr {
+.hr-home {
   width: 15%;
   margin: 0 auto;
 }
@@ -841,13 +840,12 @@ section p {
   text-align: center;
 }
 
-Fin carrito viejo -----------------------*/
-
-
 /*------------------- Comienzo carrito nuevo-----------------------*/
 
 .carrito {
   margin: 2%;
+  position: relative;
+
 }
 .payment-info {
   background:#47AEA0;
@@ -1214,7 +1212,7 @@ button {
 
   .destacado {
     width: auto;
-    height: 30vh;
+    height: 40vh;
     display: block;
     margin: 0 auto;
   }
@@ -1223,8 +1221,24 @@ button {
     font-size: 20px;
     font-weight: bold;
   }
+  .dummy-header {
+    height: 170px;
+  }
+  .navbar {
+    padding: 0 !important;
+  }
+
 }
 
 @media (min-width: 1150px) {
   
+}
+
+@media (max-width: 748px){
+  .phone {
+    display: none;
+  }
+  .mail {
+    display: none;
+  }
 }
