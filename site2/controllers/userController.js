@@ -60,7 +60,7 @@ controller = {
                 gender: req.body.gender,
                 rol: 10
             })
-            
+
             /*res.redirect('/');*/
             res.render('user/registered')
 
